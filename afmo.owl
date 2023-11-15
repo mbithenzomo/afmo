@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/"
-     xml:base="http://purl.obolibrary.org/obo/"
+<rdf:RDF xmlns="http://purl.org/afmo"
+     xml:base="http://purl.org/afmo"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -10,6 +10,7 @@
      xmlns:afmo="http://purl.org/afmo#"
      xmlns:core="https://saref.etsi.org/core/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:purl="http://purl.org/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
@@ -68,6 +69,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
+    <!-- http://purl.org/afmoIAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/afmoIAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/afmoIAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/afmoIAO_0000119"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -116,18 +129,6 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
@@ -161,12 +162,6 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
     
 
 
@@ -293,7 +288,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <owl:inverseOf rdf:resource="http://purl.org/afmo#isDetectedAFStateOf"/>
         <rdfs:domain rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
         <rdfs:range rdf:resource="http://purl.org/afmo#DetectedAFState"/>
-        <rdfs:comment>The relationship between  a monitored person and a detected AF state.</rdfs:comment>
+        <rdfs:comment>The relationship between a monitored person and a detected AF state.</rdfs:comment>
         <rdfs:label>hasDetectedAFState</rdfs:label>
     </owl:ObjectProperty>
     
@@ -411,6 +406,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
+    <!-- http://purl.org/afmo#hasRecommendation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#hasRecommendation">
+        <owl:inverseOf rdf:resource="http://purl.org/afmo#isRecommendedTo"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#Recommendation"/>
+        <rdfs:comment>The relationship between a person and a recommendation that is made to them.</rdfs:comment>
+        <rdfs:label>hasRecommendation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/afmo#hasRiskFactor -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/afmo#hasRiskFactor">
@@ -483,6 +490,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000462"/>
         <rdfs:comment>The relationship between a medical condition and one of its known/common symptoms.</rdfs:comment>
         <rdfs:label>hasSymptom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/afmo#hasSymptomState -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#hasSymptomState">
+        <owl:inverseOf rdf:resource="http://purl.org/afmo#isSymptomStateOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#SymptomState"/>
+        <rdfs:comment>The relationship between a monitored person and a symptom state.</rdfs:comment>
+        <rdfs:label>hasSymptomState</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -845,6 +864,17 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
+    <!-- http://purl.org/afmo#isRecommendedTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#isRecommendedTo">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#Recommendation"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:comment>The relationship between a recommendation and the person to whom it is recommended.</rdfs:comment>
+        <rdfs:label>isRecommendedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/afmo#isRelatedToMeasurement -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/afmo#isRelatedToMeasurement">
@@ -922,6 +952,17 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:range rdf:resource="http://purl.org/afmo#MedicalCondition"/>
         <rdfs:comment>The relationship between a symptom and its associated medical condition.</rdfs:comment>
         <rdfs:label>isSymptomOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/afmo#isSymptomStateOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#isSymptomStateOf">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#SymptomState"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:comment>The relationship between a symptom state and a person who has it.</rdfs:comment>
+        <rdfs:label>isSymptomStateOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2672,11 +2713,12 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050830">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
-        <oboInOwl:created_by>lschriml</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-02-18T12:41:09Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>MESH:D058729</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C1704436</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:0050830</oboInOwl:id>
+        <rdfs:comment>Created by: lschriml</rdfs:comment>
+        <rdfs:comment>Creation date: 2014-02-18T12:41:09Z</rdfs:comment>
+        <rdfs:comment>DOID:0050830</rdfs:comment>
         <rdfs:label>PeripheralArteryDisease</rdfs:label>
         <skos:definition>An artery disease that is characterized by build up of plaque in the arteries that carry blood to your head, organs, and limbs.</skos:definition>
     </owl:Class>
@@ -2703,17 +2745,17 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:created_by>lschriml</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-03-20T03:57:22Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>ICD10CM:G47.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:780.57</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012891</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C26884</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:206750008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0037315</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0037315</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:0050847</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>Created by: lschriml</rdfs:comment>
+        <rdfs:comment>Creation date: 2014-03-20T03:57:22Z</rdfs:comment>
+        <rdfs:comment>DOID:0050847</rdfs:comment>
         <rdfs:label>SleepApnoea</rdfs:label>
         <skos:definition>A sleep disorder characterized by repeated cessation and commencing of breathing that repeatedly disrupts sleep.</skos:definition>
     </owl:Class>
@@ -2734,18 +2776,24 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060224">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011675"/>
-        <oboInOwl:created_by>emitraka</oboInOwl:created_by>
-        <oboInOwl:creation_date>2015-01-16T14:55:21Z</oboInOwl:creation_date>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#isRiskFactorFor"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001297"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasDbXref>ICD9CM:427.31</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D001281</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C50466</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:266306001</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0004238</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0004238</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">A-fib</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>AFib</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:0060224</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>Created by: emitraka</rdfs:comment>
+        <rdfs:comment>Creation date: 2015-01-16T14:55:21Z</rdfs:comment>
+        <rdfs:comment>DOID:0060224</rdfs:comment>
         <rdfs:label>AtrialFibrillation</rdfs:label>
         <skos:definition>A heart conduction disease that is characterized by uncoordinated electrical activity in the heart&apos;s upper chambers (the atria), which causes the heartbeat to become fast and irregular and has symptoms palpitations, weakness, fatigue, lightheadedness, dizziness, confusion, shortness of breath and chest pain.</skos:definition>
         <skos:exactMatch>MESH:D001281</skos:exactMatch>
@@ -2770,11 +2818,11 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>ICD10CM:I70.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM:440.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:81817003</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0155733</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0155733</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Atherosclerosis of aorta</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>Aortic plaque</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>DOID:10230</oboInOwl:id>
+        <rdfs:comment>DOID:10230</rdfs:comment>
         <rdfs:label>AorticAtherosclerosis</rdfs:label>
         <skos:definition>Atherosclerosis of the aorta is a progressive buildup of plaque in the largest artery in the body, i.e. the aorta.</skos:definition>
     </owl:Class>
@@ -2798,14 +2846,14 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>MESH:D006973</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C3117</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:38341003</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0020538</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0020538</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">HTN</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">hyperpiesia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">vascular hypertensive disorder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym xml:lang="en">hypertensive disease</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>DOID:10763</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>DOID:10763</rdfs:comment>
         <rdfs:label>Hypertension</rdfs:label>
         <skos:definition>An artery disease characterized by chronic elevated blood pressure in the arteries.</skos:definition>
     </owl:Class>
@@ -2838,12 +2886,12 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>NCI:C27996</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:608557</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:66514008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0027051</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0027051</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">Myocardial infarct</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">heart attack</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:5844</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>DOID:5844</rdfs:comment>
         <rdfs:comment>Xref MGI.</rdfs:comment>
         <rdfs:label>MyocardialInfarction</rdfs:label>
         <skos:definition>A coronary artery disease characterized by myocardial cell death (myocardial necrosis) due to prolonged ischaemia.</skos:definition>
@@ -2881,15 +2929,15 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>NCI:C50577</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:155374007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:195108009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0018801</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0018802</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0018801</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0018802</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">CHF</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Cardiac Failure Congestive</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Congestive heart disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">Weak heart</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:6000</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>DOID:6000</rdfs:comment>
         <rdfs:label>CongestiveHeartFailure</rdfs:label>
         <skos:definition>A heart disease that is characterized by any structural or functional cardiac disorder that impairs the ability of the heart to fill with or pump a sufficient amount of blood throughout the body.</skos:definition>
     </owl:Class>
@@ -2920,11 +2968,11 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>MESH:D003920</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCI:C2985</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:267467004</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0011849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0011849</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>diabetes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:9351</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>DOID:9351</rdfs:comment>
         <rdfs:label>DiabetesMellitus</rdfs:label>
         <skos:definition>A glucose metabolism disease that is characterized by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretion, insulin action, or both.</skos:definition>
     </owl:Class>
@@ -2961,11 +3009,11 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>NCI:C159658</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:601665</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US_2022_09_01:5476005</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0028754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0028754</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>disease_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>DOID:9970</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <rdfs:comment>DOID:9970</rdfs:comment>
         <rdfs:comment>OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label>Obesity</rdfs:label>
         <skos:definition>An overnutrition that is characterized by excess body fat, traditionally defined as an elevated ratio of weight to height (specifically 30 kilograms per meter squared), has_material_basis_in a multifactorial etiology related to excess nutrition intake, decreased caloric utilization, and genetic susceptibility, and possibly medications and certain disorders of metabolism, endocrine function, and mental illness.</skos:definition>
@@ -2992,7 +3040,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Cerebrovascular accident</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Stroke</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Cerebrovascular accidents</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0001297</oboInOwl:id>
+        <rdfs:comment>HP:0001297</rdfs:comment>
         <rdfs:label>Stroke</rdfs:label>
         <skos:definition>Sudden impairment of blood flow to a part of the brain due to occlusion or rupture of an artery to the brain.</skos:definition>
     </owl:Class>
@@ -3034,8 +3082,8 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Low number of red blood cells or hemoglobin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Decreased haemoglobin</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Decreased hemoglobin</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0001903</oboInOwl:id>
         <rdfs:comment>Anemia is not a specific entity but can result from many underlying pathologic processes. The three main causes of anemia are blood loss, decreased or faulty red blood cell production, and increased destruction of red blood cells. Various classifications are in clinical use including a classification according to the mean corpuscular volume (MCV) of the erythrocytes: microcytic, macrocytic, or normocytic. Anemias can also be classified according to variations in cell size and shape, as reflected by the red-cell distribution width (RDW). Additionally, anemias can be classified into those of inadequate production and hemolytic anemias.</rdfs:comment>
+        <rdfs:comment>HP:0001903</rdfs:comment>
         <rdfs:label>Anemia</rdfs:label>
         <skos:definition>A reduction in erythrocytes volume or hemoglobin concentration.</skos:definition>
     </owl:Class>
@@ -3081,7 +3129,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Thromboembolic disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Thromboembolic events</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Embolism and thrombosis</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0001907</oboInOwl:id>
+        <rdfs:comment>HP:0001907</rdfs:comment>
         <rdfs:label>Thromboembolism</rdfs:label>
         <skos:definition>The formation of a blood clot inside a blood vessel that subsequently travels through the blood stream from the site where it formed to another location in the body, generally leading to vascular occlusion at the distant site.</skos:definition>
     </owl:Class>
@@ -3108,7 +3156,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>SNOMEDCT_US:422504002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0948008</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Ischaemic stroke</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0002140</oboInOwl:id>
+        <rdfs:comment>HP:0002140</rdfs:comment>
         <rdfs:label>IschemicStroke</rdfs:label>
         <skos:definition>Acute ischemic stroke (AIS) is defined by the sudden loss of blood flow to an area of the brain with the resulting loss of neurologic function. It is caused by thrombosis or embolism that occludes a cerebral vessel supplying a specific area of the brain. During a vessel occlusion, there is a core area where damage to the brain is irreversible and an area of penumbra where the brain has lost function owing to decreased blood flow but is not irreversibly injured.</skos:definition>
     </owl:Class>
@@ -3138,7 +3186,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Transient ischaemic attack</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Transient ischaemic attacks</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Transient ischemic attacks</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0002326</oboInOwl:id>
+        <rdfs:comment>HP:0002326</rdfs:comment>
         <rdfs:label>TransientIschemicAttack</rdfs:label>
         <skos:definition>A transient ischemic attack (TIA) is a stroke that lasts only a few minutes.</skos:definition>
     </owl:Class>
@@ -3186,7 +3234,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Left ventricular failure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Left ventricular impairment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Left-sided heart failure</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0005162</oboInOwl:id>
+        <rdfs:comment>HP:0005162</rdfs:comment>
         <rdfs:label>AbnormalLVFunction</rdfs:label>
         <skos:definition>Inability of the left ventricle to perform its normal physiologic function. Failure is either due to an inability to contract the left ventricle or the inability to relax completely and fill with blood during diastole.</skos:definition>
     </owl:Class>
@@ -3205,7 +3253,6 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011675">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2012-04-09T12:47:32Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>HP:0001656</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0001661</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0001665</oboInOwl:hasAlternativeId>
@@ -3234,7 +3281,8 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Heart rhythm disorders</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Irregular heart beat</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Irregular heartbeat</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0011675</oboInOwl:id>
+        <rdfs:comment>Creation date: 2012-04-09T12:47:32Z</rdfs:comment>
+        <rdfs:comment>HP:0011675</rdfs:comment>
         <rdfs:label>Arrhythmia</rdfs:label>
         <skos:definition>Any cardiac rhythm other than the normal sinus rhythm. Such a rhythm may be either of sinus or ectopic origin and either regular or irregular. An arrhythmia may be due to a disturbance in impulse formation or conduction or both.</skos:definition>
     </owl:Class>
@@ -3277,7 +3325,6 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012211">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2013-03-14T07:43:34Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>HP:0000082</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0000087</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0005566</oboInOwl:hasAlternativeId>
@@ -3289,7 +3336,8 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasExactSynonym>Abnormality of renal physiology</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Kidney function issue</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Renal functional abnormality</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0012211</oboInOwl:id>
+        <rdfs:comment>Creation date: 2013-03-14T07:43:34Z</rdfs:comment>
+        <rdfs:comment>HP:0012211</rdfs:comment>
         <rdfs:label>AbnormalRenalPhysiology</rdfs:label>
         <skos:definition>An abnormal functionality of the kidney.</skos:definition>
     </owl:Class>
@@ -3327,28 +3375,29 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <IAO_0000115>The intensity or degree of a manifestation.</IAO_0000115>
+        <obo:IAO_0000115>The intensity or degree of a manifestation.</obo:IAO_0000115>
+        <purl:afmoIAO_0000115>The intensity or degree of a manifestation.</purl:afmoIAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2014-06-06T06:39:22Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>SNOMEDCT_US:103370009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0522510</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Intensity</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0012824</oboInOwl:id>
-        <rdfs:comment>Severity values from HPO: https://hpo.jax.org/app/browse/term/HP:0012824
+        <rdfs:comment>Creation date: 2014-06-06T06:39:22Z</rdfs:comment>
+        <rdfs:comment>HP:0012824</rdfs:comment>
+        <rdfs:comment>Severity values are derived from the modified European Heart Rhythm Association (mEHRA) symptom classification as follows:
 
-Borderline: Having a minor degree of severity that is considered to be on the boundary between the normal and the abnormal ranges. For quantitative traits, a deviation of that is less than two standard deviations from the appropriate population mean.
-Mild: Having a relatively minor degree of severity. For quantitative traits, a deviation of between two and three standard deviations from the appropriate population mean.
-Moderate: Having a medium degree of severity. For quantitative traits, a deviation of between three and four standard deviations from the appropriate population mean.
-Profound: Having an extremely high degree of severity. For quantitative traits, a deviation of more than five standard deviations from the appropriate population mean.
-Severe: Having a high degree of severity. For quantitative traits, a deviation of between four and five standard deviations from the appropriate population mean.</rdfs:comment>
+None: No symptoms at all.
+Mild: Normal daily activity not affected, symptoms not troublesome to patient.
+Moderate: Normal daily activity not affected but patient troubled by symptoms.
+Severe: Normal daily activity affected.
+Disabling: Normal daily activity discontinued.</rdfs:comment>
         <rdfs:comment>Synonymous with PATO:0000049, intensity.</rdfs:comment>
         <rdfs:label>Severity</rdfs:label>
     </owl:Class>
@@ -3367,6 +3416,7 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-05T21:20:15Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>UMLS:C4703582</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal hepatic physiology</oboInOwl:hasExactSynonym>
         <rdfs:label>AbnormalLiverPhysiology</rdfs:label>
         <skos:definition>Any functional anomaly of the liver.</skos:definition>
@@ -3391,11 +3441,12 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasAlternativeId>SYMP:0000445</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS CUI:C0039070</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>faint</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fainting</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>loss of consciousness due to insuffiecient blood flow to the brain</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0000407</oboInOwl:id>
+        <rdfs:comment>SYMP:0000407</rdfs:comment>
         <rdfs:label>Syncope</rdfs:label>
         <skos:definition>An alteration of consciousness that is characterized by a loss of consciousness resulting from insufficient blood flow to the brain.</skos:definition>
     </owl:Class>
@@ -3410,37 +3461,14 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SYMP_0000412 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000412">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000462"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/afmo#isSymptomOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0000412</oboInOwl:id>
-        <rdfs:label>Anxiety</rdfs:label>
-        <skos:definition>A neurological and physiological symptom that is characterized by a painful or apprehensive uneasiness of mind usually over an impending or anticipated ill.</skos:definition>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000412"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>A neurological and physiological symptom that is characterized by a painful or apprehensive uneasiness of mind usually over an impending or anticipated ill.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=anxiety</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SYMP_0000462 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000462">
-        <IAO_0000115>A symptom is a perceived change in function, sensation, loss, disturbance or appearance reported by a patient indicative of a disease.</IAO_0000115>
+        <obo:IAO_0000115>A symptom is a perceived change in function, sensation, loss, disturbance or appearance reported by a patient indicative of a disease.</obo:IAO_0000115>
+        <purl:afmoIAO_0000115>A symptom is a perceived change in function, sensation, loss, disturbance or appearance reported by a patient indicative of a disease.</purl:afmoIAO_0000115>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0000462</oboInOwl:id>
         <rdfs:comment xml:lang="en">Class to group symptoms of atrial fibrillation.</rdfs:comment>
+        <rdfs:comment>SYMP:0000462</rdfs:comment>
         <rdfs:label>Symptom</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3465,11 +3493,11 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasDbXref>ICD9CM_2005:785.1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0030252</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0030252</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0004066</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>abnormal heart beats</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0000530</oboInOwl:id>
+        <rdfs:comment>SYMP:0000530</rdfs:comment>
         <rdfs:label>Palpitation</rdfs:label>
         <skos:definition>Palpitation is a cardiovascykar system symptom characterized by an abnormal awareness of the beating of the heart,whether it is too slow, too fast, irregular, or at its normal frequency when excited by violent exertion, strong emotion, or disease.</skos:definition>
     </owl:Class>
@@ -3479,35 +3507,6 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
         <owl:annotatedTarget>Palpitation is a cardiovascykar system symptom characterized by an abnormal awareness of the beating of the heart,whether it is too slow, too fast, irregular, or at its normal frequency when excited by violent exertion, strong emotion, or disease.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Palpitation</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=palpitation</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SYMP_0000563 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000563">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000462"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/afmo#isSymptomOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>ICD9CM_2005:788.41</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0042023</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0004030</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>frequent urination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>nocturia</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>SYMP:0000563</oboInOwl:id>
-        <rdfs:label>UrinaryFrequency</rdfs:label>
-        <skos:definition>A urinary system symptom that is characterized by the need to urinate many times during the day, at night, or both but in normal or less-than-normal volumes.  Frequency may be accompanied by a sensation of an urgent need to void (urgency of urination).</skos:definition>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000563"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>A urinary system symptom that is characterized by the need to urinate many times during the day, at night, or both but in normal or less-than-normal volumes.  Frequency may be accompanied by a sensation of an urgent need to void (urgency of urination).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:https://www.merckmanuals.com/professional/genitourinary-disorders/symptoms-of-genitourinary-disorders/urinary-frequency</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3524,19 +3523,41 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
         </rdfs:subClassOf>
         <oboInOwl:hasDbXref>ICD9CM_2005:786.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9CM_2005:786.50</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0008031</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0008031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0243830</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0400627</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0000576</oboInOwl:id>
-        <rdfs:comment>Pressure, burning, or numbness in the chest.</rdfs:comment>
+        <rdfs:comment>SYMP:0000576</rdfs:comment>
         <rdfs:label>ChestPain</rdfs:label>
+        <skos:definition>Pressure, burning, or numbness in the chest.</skos:definition>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000576"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <owl:annotatedTarget>Pressure, burning, or numbness in the chest.</owl:annotatedTarget>
         <rdfs:comment>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D002637. Accessed 15 August 2023.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SYMP_0000610 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000610">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000462"/>
+        <oboInOwl:hasDbXref>ICD9CM_2005:780.4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0476206</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS_ICD9CM_2005_AUI:A0243727</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>dizzy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
+        <rdfs:comment>SYMP:0000610</rdfs:comment>
+        <rdfs:label>Dizziness</rdfs:label>
+        <skos:definition>A  balance symptom that is characterized by a sensation of unsteadiness accompanied by a feeling of movement within the head.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000610"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>A  balance symptom that is characterized by a sensation of unsteadiness accompanied by a feeling of movement within the head.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=dizziness</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3551,13 +3572,14 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oboInOwl:hasDbXref>UMLS CUI:C0013404</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>breathing difficulty</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>breathlessness</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>difficulty breathing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>labored respiration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>shortness of breath</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0019153</oboInOwl:id>
+        <rdfs:comment>SYMP:0019153</rdfs:comment>
         <rdfs:label>Dyspnea</rdfs:label>
         <skos:definition>A respiratory abnormality that is characterized by difficult or labored respiration.</skos:definition>
     </owl:Class>
@@ -3580,8 +3602,9 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oboInOwl:hasDbXref>UMLS CUI:C0015672</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>SYMP:0019177</oboInOwl:id>
+        <rdfs:comment>SYMP:0019177</rdfs:comment>
         <rdfs:label>Fatigue</rdfs:label>
         <skos:definition>A neurological and physiological symptom that is characterized by a weariness or exhaustion from labor, exertion, or stress.</skos:definition>
     </owl:Class>
@@ -3591,6 +3614,19 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
         <owl:annotatedTarget>A neurological and physiological symptom that is characterized by a weariness or exhaustion from labor, exertion, or stress.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=fatigue</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SYMP_0020032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0020032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000462"/>
+        <oboInOwl:hasDbXref>UMLS:C0232292</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>symptoms</oboInOwl:hasOBONamespace>
+        <rdfs:comment>SYMP:0020032</rdfs:comment>
+        <rdfs:label>ChestTightness</rdfs:label>
+        <skos:definition>A chest discomfort that is characterized by any type of pain or discomfort between your upper belly and lower neck.</skos:definition>
+    </owl:Class>
     
 
 
@@ -3655,7 +3691,7 @@ Severe: Having a high degree of severity. For quantitative traits, a deviation o
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref xml:lang="en">UMLS_CUI:C0001948</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref xml:lang="en">UMLS:C0001948</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">Behaviours associated with the ingesting of alcoholic beverages, including social drinking.</rdfs:comment>
         <rdfs:label>AlcoholConsumptionLevel</rdfs:label>
     </owl:Class>
@@ -3712,7 +3748,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:allValuesFrom rdf:resource="http://purl.org/afmo#HeartRateMeasurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0439385</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0439385</oboInOwl:hasDbXref>
         <rdfs:comment>The number of heartbeats measured per minute time.</rdfs:comment>
         <rdfs:label>BeatsPerMinute</rdfs:label>
     </owl:Class>
@@ -3758,7 +3794,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://purl.org/afmo#BloodPressure">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#VitalSign"/>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0005823</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0005823</oboInOwl:hasDbXref>
         <rdfs:comment>Pressure of the blood on the arteries and other blood vessels.</rdfs:comment>
         <rdfs:label>BloodPressure</rdfs:label>
     </owl:Class>
@@ -3813,7 +3849,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:allValuesFrom rdf:resource="http://purl.org/afmo#RespiratoryRateMeasurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0439386</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0439386</oboInOwl:hasDbXref>
         <rdfs:comment>The number of breaths (inhalation and exhalation) taken per minute time.</rdfs:comment>
         <rdfs:label>BreathsPerMinute</rdfs:label>
     </owl:Class>
@@ -3961,7 +3997,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:onClass rdf:resource="http://purl.org/afmo#MedicalCondition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0011900</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0011900</oboInOwl:hasDbXref>
         <rdfs:comment>A diagnosis of a medical condition. Diagnosis: the determination of the nature of a disease or condition, or the distinguishing of one disease or condition from another.</rdfs:comment>
         <rdfs:label>Diagnosis</rdfs:label>
     </owl:Class>
@@ -3971,6 +4007,16 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>A diagnosis of a medical condition. Diagnosis: the determination of the nature of a disease or condition, or the distinguishing of one disease or condition from another.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://meshb.nlm.nih.gov/record/ui?ui=D003933. Accessed 19 September 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/afmo#DiagnosticRecommendation -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#DiagnosticRecommendation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#Recommendation"/>
+        <rdfs:comment>A recommendation that involves consultatation with a physician and/or diagnostic procedures.</rdfs:comment>
+        <rdfs:label>DiagnosticRecommendation</rdfs:label>
+    </owl:Class>
     
 
 
@@ -4033,7 +4079,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:allValuesFrom rdf:resource="http://purl.org/afmo#ECGMeasurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0013798</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0013798</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Electrocardiogram</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Electrocardiography</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>Recording of the moment-to-moment electromotive forces of the heart as projected onto various sites on the body&apos;s surface, delineated as a scalar function of time. The recording is monitored by a tracing on slow moving chart paper or by observing it on a cardioscope, which is a cathode ray tube display.</rdfs:comment>
@@ -4120,11 +4166,29 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
     
 
 
+    <!-- http://purl.org/afmo#HealthyBMI -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#HealthyBMI">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#IncreaseBMI"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#ReduceBMI"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#LifestyleRecommendation"/>
+        <rdfs:comment>Recommendation to target a healthy BMI.</rdfs:comment>
+        <rdfs:label>HealthyBMI</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#HeartRate -->
 
     <owl:Class rdf:about="http://purl.org/afmo#HeartRate">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#VitalSign"/>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0018810</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0018810</oboInOwl:hasDbXref>
         <rdfs:comment>The number of times the heart ventricles contract per unit of time, usually per minute.</rdfs:comment>
         <rdfs:label>HeartRate</rdfs:label>
     </owl:Class>
@@ -4159,12 +4223,48 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
     
 
 
+    <!-- http://purl.org/afmo#HeartRateMonitor -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#HeartRateMonitor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4wear/OnBodyWearable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/afmo#HeartRate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Heart rate monitor as an example of a type of wearable device.</rdfs:comment>
+        <rdfs:label>HeartRateMonitor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/afmo#IncreasePhysicalActivity -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#IncreasePhysicalActivity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#LifestyleRecommendation"/>
+        <rdfs:comment>Recommendation to increase physical activity.</rdfs:comment>
+        <rdfs:label>IncreasePhysicalActivity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#LifestyleData -->
 
     <owl:Class rdf:about="http://purl.org/afmo#LifestyleData">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#PersonalData"/>
         <rdfs:comment>Qualities related to a person&apos;s lifestyle.</rdfs:comment>
         <rdfs:label>LifestyleData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/afmo#LifestyleRecommendation -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#LifestyleRecommendation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#Recommendation"/>
+        <rdfs:comment>A recommendation that involves lifestyle modification.</rdfs:comment>
+        <rdfs:label>LifestyleRecommendation</rdfs:label>
     </owl:Class>
     
 
@@ -4184,15 +4284,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://purl.org/afmo#MajorBleeding">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
-        <rdfs:comment>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke.</rdfs:comment>
-        <rdfs:label>MajorBleeding</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/afmo#MajorBleeding"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke.</owl:annotatedTarget>
-        <rdfs:isDefinedBy>Pisters, R.; Lane, D. A.; Nieuwlaat, R.; de Vos, C. B.; Crijns, H. J. G. M.; and Lip, G. Y. H. 2010. A Novel User-Friendly Score (HAS-BLED) To Assess 1-Year Risk of Major Bleeding in Patients With Atrial Fibrillation: The Euro Heart Survey. Chest, 138(5): 1093–1100.</rdfs:isDefinedBy>
-    </owl:Axiom>
     
 
 
@@ -4220,7 +4312,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
     <!-- http://purl.org/afmo#MedicalHistory -->
 
     <owl:Class rdf:about="http://purl.org/afmo#MedicalHistory">
-        <oboInOwl:hasDbXref>UMLS_CUI:C0262926</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0262926</oboInOwl:hasDbXref>
         <rdfs:comment>A record of a patient&apos;s background regarding health and the occurrence of disease events of the individual.</rdfs:comment>
         <rdfs:label>MedicalHistory</rdfs:label>
     </owl:Class>
@@ -4243,6 +4335,16 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
     
 
 
+    <!-- http://purl.org/afmo#MedicationRecommendation -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#MedicationRecommendation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#Recommendation"/>
+        <rdfs:comment>A recommendation that involves medication or drugs.</rdfs:comment>
+        <rdfs:label>MedicationRecommendation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#MillimetersOfMercury -->
 
     <owl:Class rdf:about="http://purl.org/afmo#MillimetersOfMercury">
@@ -4253,7 +4355,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:allValuesFrom rdf:resource="http://purl.org/afmo#BloodPressureMeasurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0439475</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0439475</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>mmHg</oboInOwl:hasExactSynonym>
         <rdfs:comment>A non-SI unit of pressure equal to 1/760 of a standard atmosphere (a standard atmosphere being defined as equal to 101 325 pascals). One Torr is equal to 133.3223684 pascals.</rdfs:comment>
         <rdfs:label>MillimetersOfMercury</rdfs:label>
@@ -4605,6 +4707,24 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
     
 
 
+    <!-- http://purl.org/afmo#OralAnticoagulationTherapy -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#OralAnticoagulationTherapy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#OATContraindicated"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#OATRecommended"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicationRecommendation"/>
+        <rdfs:comment>Whether oral anticoagulation therapy (OAT) is recommended or contraindicated. This is primarily based on the HAS-BLED score for major bleeding risk.</rdfs:comment>
+        <rdfs:label>OralAnticoagulationTherapy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#PPG -->
 
     <owl:Class rdf:about="http://purl.org/afmo#PPG">
@@ -4615,7 +4735,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
                 <owl:allValuesFrom rdf:resource="http://purl.org/afmo#PPGMeasurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0162599</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0162599</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Photoplethysmography</oboInOwl:hasExactSynonym>
         <rdfs:comment>Plethysmographic determination in which the intensity of light reflected from the skin surface and the red cells below is measured to determine the blood volume of the respective area. There are two types, transmission and reflectance.</rdfs:comment>
         <rdfs:label>PPG</rdfs:label>
@@ -4720,11 +4840,40 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#QuitSmoking -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#QuitSmoking">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#LifestyleRecommendation"/>
+        <rdfs:comment>Recommendation to quit smoking.</rdfs:comment>
+        <rdfs:label>QuitSmoking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/afmo#Recommendation -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#Recommendation">
+        <rdfs:comment>A recommendation that is suggested regarding a monitored person in order to mitigate adverse health situations.</rdfs:comment>
+        <rdfs:label>Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/afmo#ReduceAlcoholConsumption -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#ReduceAlcoholConsumption">
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#LifestyleRecommendation"/>
+        <rdfs:comment>Recommendation to reduce alcohol consumption.</rdfs:comment>
+        <rdfs:label>ReduceAlcoholConsumption</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#RespiratoryRate -->
 
     <owl:Class rdf:about="http://purl.org/afmo#RespiratoryRate">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#VitalSign"/>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0231832</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0231832</oboInOwl:hasDbXref>
         <rdfs:comment>The number of times an organism breathes with the lungs (respiration) per unit time, usually per minute.</rdfs:comment>
         <rdfs:label>RespiratoryRate</rdfs:label>
     </owl:Class>
@@ -4768,7 +4917,7 @@ Highly active: &gt;=12,500</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.org/afmo#MedicalCondition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <IAO_0000119 xml:lang="en"></IAO_0000119>
+        <purl:afmoIAO_0000119 xml:lang="en"></purl:afmoIAO_0000119>
         <oboInOwl:hasDbXref xml:lang="en">MSH:D012307</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref xml:lang="en">SNOMEDCT_US:80943009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref xml:lang="en">UMLS:C0035648</oboInOwl:hasDbXref>
@@ -4864,7 +5013,7 @@ Highly active: &gt;=12,500</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref xml:lang="en">UMLS_CUI:C0453996</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref xml:lang="en">UMLS:C0453996</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym xml:lang="en">Tobacco smoking behaviour</oboInOwl:hasRelatedSynonym>
         <rdfs:comment xml:lang="en">A person&apos;s lifetime and current cigarette (tobacco) smoking behaviour.</rdfs:comment>
         <rdfs:label>SmokingStatus</rdfs:label>
@@ -4898,20 +5047,29 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#SymptomState -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#SymptomState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#Asymptomatic"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Symptomatic"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/afmo#DetectedSituation"/>
+        <rdfs:comment>Class to represent one of two possible values for the symptom state in a person with detected AF; i.e. symptomatic or not.</rdfs:comment>
+        <rdfs:label>SymptomState</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/afmo#SystolicBloodPressure -->
 
     <owl:Class rdf:about="http://purl.org/afmo#SystolicBloodPressure">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#BloodPressure"/>
-        <rdfs:comment>The highest arterial blood pressure of a cardiac cycle occurring immediately after systole of the left ventricle of the heart. Systole: the contraction of the heart by which the blood is forced out of the chambers and into the aorta and pulmonary artery.</rdfs:comment>
-        <rdfs:label>SystolicBloodPressure</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>The highest arterial blood pressure of a cardiac cycle occurring immediately after systole of the left ventricle of the heart. Systole: the contraction of the heart by which the blood is forced out of the chambers and into the aorta and pulmonary artery.</owl:annotatedTarget>
-        <rdfs:isDefinedBy>“Systole.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/systole. Accessed 18 September 2023.</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy>“Systolic blood pressure.” Merriam-Webster.com Medical Dictionary, Merriam-Webster, https://www.merriam-webster.com/medical/systolic%20blood%20pressure. Accessed 18 September 2023.</rdfs:isDefinedBy>
-    </owl:Axiom>
     
 
 
@@ -4944,10 +5102,16 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredByDevice"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/afmo#HeartRateMonitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredByDevice"/>
                 <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasDbXref>UMLS_CUI:C0518766</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0518766</oboInOwl:hasDbXref>
         <rdfs:comment>The signs of life that may be monitored or measured, namely pulse rate, respiratory rate, body temperature, and blood pressure.</rdfs:comment>
         <rdfs:label>VitalSign</rdfs:label>
     </owl:Class>
@@ -5206,6 +5370,22 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#AbnormalLiverFunction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AbnormalLiverFunction">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0031865"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#AbnormalRenalFunction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AbnormalRenalFunction">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012211"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#Active -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Active">
@@ -5214,21 +5394,42 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
-    <!-- http://purl.org/afmo#Borderline -->
+    <!-- http://purl.org/afmo#Anemia -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Borderline">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
-                </owl:oneOf>
-            </owl:Class>
-        </rdf:type>
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Anemia">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0001903"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#AorticAtherosclerosis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AorticAtherosclerosis">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_10230"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#Asymptomatic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Asymptomatic">
+        <rdf:type rdf:resource="http://purl.org/afmo#SymptomState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#AtrialFibrillation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AtrialFibrillation">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#CongestiveHeartFailure -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#CongestiveHeartFailure">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_6000"/>
     </owl:NamedIndividual>
     
 
@@ -5261,6 +5462,33 @@ Highly active: &gt;=12,500</rdfs:comment>
                 <owl:onProperty rdf:resource="http://purl.org/afmo#isRiskFactorFor"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/afmo#MedicalCondition"/>
             </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#DiabetesMellitus -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#DiabetesMellitus">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_9351"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#Disabling -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Disabling">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
+                </owl:oneOf>
+            </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
     
@@ -5431,6 +5659,30 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#Hypertension -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Hypertension">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#IncreaseBMI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IncreaseBMI">
+        <rdf:type rdf:resource="http://purl.org/afmo#HealthyBMI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#IncreaseDailySteps -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IncreaseDailySteps">
+        <rdf:type rdf:resource="http://purl.org/afmo#IncreasePhysicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#IntermediateConsumption -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#IntermediateConsumption">
@@ -5461,6 +5713,22 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Restriction>
         </rdf:type>
         <afmo:isHigherConsumptionThan rdf:resource="http://purl.org/afmo#LowConsumption"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#IschemicStroke -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IschemicStroke">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0002140"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#LVDysfunction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#LVDysfunction">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0005162"/>
     </owl:NamedIndividual>
     
 
@@ -5545,6 +5813,14 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#MajorBleeding -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#MajorBleeding">
+        <rdf:type rdf:resource="http://purl.org/afmo#MajorBleeding"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#Male -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Male">
@@ -5582,10 +5858,10 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdf:type>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
                 </owl:oneOf>
             </owl:Class>
@@ -5601,10 +5877,10 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdf:type>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
                 </owl:oneOf>
             </owl:Class>
@@ -5627,6 +5903,14 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#MyocardialInfarction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#MyocardialInfarction">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_5844"/>
     </owl:NamedIndividual>
     
 
@@ -5684,6 +5968,25 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
+    <!-- http://purl.org/afmo#None -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#None">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#Normal -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Normal">
@@ -5703,6 +6006,22 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isHeavierThan rdf:resource="http://purl.org/afmo#Underweight"/>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Obese"/>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Overweight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#OATContraindicated -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OATContraindicated">
+        <rdf:type rdf:resource="http://purl.org/afmo#OralAnticoagulationTherapy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#OATRecommended -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OATRecommended">
+        <rdf:type rdf:resource="http://purl.org/afmo#OralAnticoagulationTherapy"/>
     </owl:NamedIndividual>
     
 
@@ -5753,21 +6072,56 @@ Highly active: &gt;=12,500</rdfs:comment>
     
 
 
-    <!-- http://purl.org/afmo#Profound -->
+    <!-- http://purl.org/afmo#Palpitation001 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Profound">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
-                </owl:oneOf>
-            </owl:Class>
-        </rdf:type>
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Palpitation001">
+        <rdf:type rdf:resource="http://purl.org/afmo#ExperiencedSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#PeripheralArteryDisease -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#PeripheralArteryDisease">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0050830"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#ReduceBMI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#ReduceBMI">
+        <rdf:type rdf:resource="http://purl.org/afmo#HealthyBMI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#SBPMeasurement001 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement001">
+        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
+        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
+        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">161.0</core:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#SBPMeasurement002 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement002">
+        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
+        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
+        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">159.0</core:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#SBPMeasurement003 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement003">
+        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
+        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
+        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180.0</core:hasValue>
     </owl:NamedIndividual>
     
 
@@ -5787,14 +6141,22 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdf:type>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#Borderline"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Disabling"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Mild"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Moderate"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#Profound"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#None"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#Severe"/>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#SleepApnoea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SleepApnoea">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0050847"/>
     </owl:NamedIndividual>
     
 
@@ -5822,6 +6184,38 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#Symptomatic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Symptomatic">
+        <rdf:type rdf:resource="http://purl.org/afmo#SymptomState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#SystolicBloodPressure -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SystolicBloodPressure">
+        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#Thromboembolism -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Thromboembolism">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0001907"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#TransientIschemicAttack -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#TransientIschemicAttack">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0002326"/>
     </owl:NamedIndividual>
     
 
@@ -5889,6 +6283,39 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isYoungerThan rdf:resource="http://purl.org/afmo#Elderly"/>
         <afmo:isYoungerThan rdf:resource="http://purl.org/afmo#LateMiddleAged"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/afmo#MajorBleeding">
+        <oboInOwl:hasDbXref>UMLS:C5243991</oboInOwl:hasDbXref>
+        <rdfs:label>MajorBleeding</rdfs:label>
+        <skos:definition>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke</skos:definition>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/afmo#MajorBleeding"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Pisters, R.; Lane, D. A.; Nieuwlaat, R.; de Vos, C. B.; Crijns, H. J. G. M.; and Lip, G. Y. H. 2010. A Novel User-Friendly Score (HAS-BLED) To Assess 1-Year Risk of Major Bleeding in Patients With Atrial Fibrillation: The Euro Heart Survey. Chest, 138(5): 1093–1100.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    <rdf:Description rdf:about="http://purl.org/afmo#SystolicBloodPressure">
+        <rdfs:comment>The highest arterial blood pressure of a cardiac cycle occurring immediately after systole of the left ventricle of the heart. Systole: the contraction of the heart by which the blood is forced out of the chambers and into the aorta and pulmonary artery.</rdfs:comment>
+        <rdfs:label>SystolicBloodPressure</rdfs:label>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The highest arterial blood pressure of a cardiac cycle occurring immediately after systole of the left ventricle of the heart. Systole: the contraction of the heart by which the blood is forced out of the chambers and into the aorta and pulmonary artery.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>“Systole.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/systole. Accessed 18 September 2023.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>“Systolic blood pressure.” Merriam-Webster.com Medical Dictionary, Merriam-Webster, https://www.merriam-webster.com/medical/systolic%20blood%20pressure. Accessed 18 September 2023.</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -6412,5 +6839,5 @@ Highly active: &gt;=12,500</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
