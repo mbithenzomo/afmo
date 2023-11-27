@@ -39,10 +39,10 @@ Health domain concepts have been manually cross-referenced to concepts from the 
 - Nactional cancer Institute (NCI) Thesaurus
 - MedlinePlus</rdfs:comment>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -50,7 +50,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
@@ -58,7 +58,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:label>definition</rdfs:label>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
@@ -66,142 +66,142 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119">
         <rdfs:label>definition source</rdfs:label>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/afmoIAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/afmoIAO_0000115"/>
-    
+
 
 
     <!-- http://purl.org/afmoIAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/afmoIAO_0000119"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
+
 
 
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
     <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
-    
+
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
+
 
 
     <!-- http://www.w3.org/2003/06/sw-vocab-status/nsterm_status -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/nsterm_status"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -209,16 +209,16 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -226,7 +226,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/afmo#hasAgeGroup -->
@@ -246,7 +246,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
             <rdf:Description rdf:about="http://purl.org/afmo#hasAgeGroup"/>
         </owl:members>
     </rdf:Description>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAlcoholConsumptionLevel -->
@@ -265,7 +265,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
             <rdf:Description rdf:about="http://purl.org/afmo#hasAlcoholConsumptionLevel"/>
         </owl:members>
     </rdf:Description>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBMICategory -->
@@ -278,7 +278,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their BMI category.</rdfs:comment>
         <rdfs:label>hasBMICategory</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasDetectedAFState -->
@@ -291,7 +291,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a detected AF state.</rdfs:comment>
         <rdfs:label>hasDetectedAFState</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasDiagnosis -->
@@ -303,7 +303,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their diagnosis.</rdfs:comment>
         <rdfs:label>hasDiagnosis</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasGender -->
@@ -316,7 +316,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their gender.</rdfs:comment>
         <rdfs:label>hasGender</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHistory -->
@@ -328,7 +328,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and an aspect of their medical history.</rdfs:comment>
         <rdfs:label>hasHistory</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasMeasurement -->
@@ -340,7 +340,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and the measurement of a property of their body.</rdfs:comment>
         <rdfs:label>hasMeasurement</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasPersonalData -->
@@ -352,7 +352,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and their personal data.</rdfs:comment>
         <rdfs:label>hasPersonalData</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasPhysicalActivityLevel -->
@@ -364,7 +364,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their physical activity level.</rdfs:comment>
         <rdfs:label>hasPhysicalActivityLevel</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasPredictedAFRiskLevel -->
@@ -377,7 +377,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a predicted risk level for AF.</rdfs:comment>
         <rdfs:label>hasPredictedAFRiskLevel</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasPredictedBleedingRiskLevel -->
@@ -390,7 +390,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a predicted risk level for major bleeding.</rdfs:comment>
         <rdfs:label>hasPredictedBleedingRiskLevel</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasPredictedStrokeRiskLevel -->
@@ -403,7 +403,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a predicted risk level for stroke.</rdfs:comment>
         <rdfs:label>hasPredictedStrokeRiskLevel</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasRecommendation -->
@@ -415,7 +415,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and a recommendation that is made to them.</rdfs:comment>
         <rdfs:label>hasRecommendation</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasRiskFactor -->
@@ -428,7 +428,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a medical condition and (one of) its risk factor(s).</rdfs:comment>
         <rdfs:label>hasRiskFactor</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSeverity -->
@@ -441,7 +441,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a symptom and its experienced severity in a monitored person.</rdfs:comment>
         <rdfs:label>hasSeverity</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSex -->
@@ -454,7 +454,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their sex.</rdfs:comment>
         <rdfs:label>hasSex</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSituation -->
@@ -466,7 +466,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a situation.</rdfs:comment>
         <rdfs:label>hasSituation</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSmokingStatus -->
@@ -479,7 +479,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and their smoking status.</rdfs:comment>
         <rdfs:label>hasSmokingStatus</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSymptom -->
@@ -491,7 +491,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a medical condition and one of its known/common symptoms.</rdfs:comment>
         <rdfs:label>hasSymptom</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSymptomState -->
@@ -503,7 +503,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a symptom state.</rdfs:comment>
         <rdfs:label>hasSymptomState</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSystolicBloodPressureMeasurement -->
@@ -516,7 +516,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and their systolic blood pressure measurement.</rdfs:comment>
         <rdfs:label>hasSystolicBloodPressureMeasurement</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isAgeGroupOf -->
@@ -528,7 +528,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an age group and a person or people who belong(s) to it.</rdfs:comment>
         <rdfs:label>isAgeGroupOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isAlcoholConsumptionLevelOf -->
@@ -540,7 +540,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an alcohol consumption category and a person who belongs to it.</rdfs:comment>
         <rdfs:label>isAlcoholConsumptionLevelOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isAssociatedWithDiagnosis -->
@@ -553,7 +553,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a medical condition and a diagnosis.</rdfs:comment>
         <rdfs:label>isAssociatedWithDiagnosis</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isAssociatedWithExperience -->
@@ -565,7 +565,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a symptom and a particular symptom being experienced by a monitored person.</rdfs:comment>
         <rdfs:label>isAssociatedWithExperience</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isAssociatedWithHistory -->
@@ -577,7 +577,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a medical condition and an aspect of a person&apos;s medical history that is associated with it.</rdfs:comment>
         <rdfs:label>isAssociatedWithHistory</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isBMICategoryOf -->
@@ -589,7 +589,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a BMI category and a person who belongs to it.</rdfs:comment>
         <rdfs:label>isBMICategoryOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isDetectedAFStateOf -->
@@ -601,7 +601,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a detected AF state and a monitored person.</rdfs:comment>
         <rdfs:label>isDetectedAFStateOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isDiagnosedByPhysician -->
@@ -613,7 +613,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between adiagnosis and the physician who makes it.</rdfs:comment>
         <rdfs:label>isDiagnosedByPhysician</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isDiagnosisOf -->
@@ -625,7 +625,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a diagnosis and the person who is diagnosed.</rdfs:comment>
         <rdfs:label>isDiagnosisOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isDiagnosisOfCondition -->
@@ -637,7 +637,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a diagnosis and a medical condition it is associated with.</rdfs:comment>
         <rdfs:label>isDiagnosisOfCondition</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isExperienceOfSymptom -->
@@ -649,7 +649,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a particular symptom being experienced by a monitored person and a symptom.</rdfs:comment>
         <rdfs:label>isExperienceOfSymptom</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isExperiencedBy -->
@@ -662,7 +662,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a symptom and a person who is experiencing it.</rdfs:comment>
         <rdfs:label>isExperiencedBy</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isExperiencing -->
@@ -674,7 +674,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a monitored person and a symptom that they are experiencing.</rdfs:comment>
         <rdfs:label>isExperiencing</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isGenderOf -->
@@ -692,7 +692,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
             <rdf:Description rdf:about="http://purl.org/afmo#isGenderOf"/>
         </owl:members>
     </rdf:Description>
-    
+
 
 
     <!-- http://purl.org/afmo#isHeavierThan -->
@@ -705,7 +705,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the BMICategory class.</rdfs:comment>
         <rdfs:label>isHeavierThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isHigherConsumptionThan -->
@@ -719,7 +719,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the AlcoholConsumptionLevel class.</rdfs:comment>
         <rdfs:label>isHigherConsumptionThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isHistoryOf -->
@@ -730,7 +730,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an aspect of a person&apos;s medical history and the person.</rdfs:comment>
         <rdfs:label>isHistoryOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isHistoryOfCondition -->
@@ -742,7 +742,20 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an aspect of a person&apos;s medical history and a medical condition that is associated with it.</rdfs:comment>
         <rdfs:label>isHistoryOfCondition</rdfs:label>
     </owl:ObjectProperty>
-    
+
+
+
+    <!-- http://purl.org/afmo#isLessSevereThan -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#isLessSevereThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://purl.org/afmo#isMoreSevereThan"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdfs:comment>Transitive property to add order to the Severity class.</rdfs:comment>
+        <rdfs:label>isLessSevereThan</rdfs:label>
+    </owl:ObjectProperty>
+
 
 
     <!-- http://purl.org/afmo#isLighterThan -->
@@ -755,7 +768,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the BMICategory class.</rdfs:comment>
         <rdfs:label>isLighterThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isLowerConsumptionThan -->
@@ -767,7 +780,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the AlcoholConsumptionLevel class.</rdfs:comment>
         <rdfs:label>isLowerConsumptionThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isMeasurementOf -->
@@ -778,7 +791,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a measurament and the person whose property is being measured.</rdfs:comment>
         <rdfs:label>isMeasurementOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
+
+
+    <!-- http://purl.org/afmo#isMoreSevereThan -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#isMoreSevereThan">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <rdfs:comment>Transitive property to add order to the Severity class.</rdfs:comment>
+        <rdfs:label>isMoreSevereThan</rdfs:label>
+    </owl:ObjectProperty>
+
 
 
     <!-- http://purl.org/afmo#isNearDevice -->
@@ -791,7 +815,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and the near-body wearable device that is located near them.</rdfs:comment>
         <rdfs:label>isNearDevice</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isOlderThan -->
@@ -804,7 +828,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the AgeGroup class.</rdfs:comment>
         <rdfs:label>isOlderThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isPersonalDataOf -->
@@ -815,7 +839,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between personal data and the person to whom it belongs.</rdfs:comment>
         <rdfs:label>isPersonalDataOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isPhysicalActivityLevelOf -->
@@ -826,7 +850,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a physical activity level and a monitored person.</rdfs:comment>
         <rdfs:label>isPhysicalActivityLevelOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isPredictedAFRiskLevelOf -->
@@ -838,7 +862,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a predicted risk level for AF and a monitored person.</rdfs:comment>
         <rdfs:label>isPredictedAFRiskLevelOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isPredictedBleedingRiskLevelOf -->
@@ -849,7 +873,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a predicted risk level for major bleeding and a monitored person.</rdfs:comment>
         <rdfs:label>isPredictedBleedingRiskLevelOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isPredictedStrokeRiskLevelOf -->
@@ -861,7 +885,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a predicted risk level for stroke and a monitored person.</rdfs:comment>
         <rdfs:label>isPredictedStrokeRiskLevelOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isRecommendedTo -->
@@ -872,7 +896,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a recommendation and the person to whom it is recommended.</rdfs:comment>
         <rdfs:label>isRecommendedTo</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isRelatedToMeasurement -->
@@ -884,7 +908,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an observable property and a measurement of it.</rdfs:comment>
         <rdfs:label>isRelatedToMeasurement</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isRiskFactorFor -->
@@ -896,7 +920,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a risk factor and a medical condition.</rdfs:comment>
         <rdfs:label>isRiskFactorFor</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSeverityOf -->
@@ -907,7 +931,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a level of severity and a symptom.</rdfs:comment>
         <rdfs:label>isSeverityOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSexOf -->
@@ -919,7 +943,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a sex category and a person or people who belong(s) to it.</rdfs:comment>
         <rdfs:label>isSexOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSituationOf -->
@@ -930,7 +954,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a situation and a monitored person.</rdfs:comment>
         <rdfs:label>isSituationOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSmokingStatusOf -->
@@ -942,7 +966,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a smoking status category and a person who belongs to it.</rdfs:comment>
         <rdfs:label>isSmokingStatusOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSymptomOf -->
@@ -953,7 +977,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a symptom and its associated medical condition.</rdfs:comment>
         <rdfs:label>isSymptomOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSymptomStateOf -->
@@ -964,7 +988,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a symptom state and a person who has it.</rdfs:comment>
         <rdfs:label>isSymptomStateOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isSystolicBloodPressureMeasurementOf -->
@@ -976,7 +1000,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a systolic blood pressure measurament and the person whose systolic blood pressure is being measured.</rdfs:comment>
         <rdfs:label>isSystolicBloodPressureMeasurementOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isUnitOfMeasurementFor -->
@@ -989,7 +1013,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a unit of measurement and a measurement that uses it.</rdfs:comment>
         <rdfs:label>isUnitOfMeasurementFor</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#isYoungerThan -->
@@ -1001,7 +1025,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Transitive property to add order to the AgeGroup class.</rdfs:comment>
         <rdfs:label>isYoungerThan</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#makesDiagnosis -->
@@ -1013,7 +1037,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a physician and a diagnosis that they make.</rdfs:comment>
         <rdfs:label>makesDiagnosis</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#wearsDevice -->
@@ -1025,7 +1049,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a person and the on-body wearable device that is located on them.</rdfs:comment>
         <rdfs:label>wearsDevice</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/isMeasuredByDevice -->
@@ -1038,7 +1062,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">isMeasuredByDevice</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/isMeasuredIn -->
@@ -1050,7 +1074,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">isMeasuredIn</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/makesMeasurement -->
@@ -1062,7 +1086,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a device and the measurement it makes.</rdfs:comment>
         <rdfs:label>makesMeasurement</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/measurementMadeBy -->
@@ -1074,7 +1098,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">measurementMadeBy</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/measuresProperty -->
@@ -1085,7 +1109,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a device and the observable property that it measures.</rdfs:comment>
         <rdfs:label>measuresProperty</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/relatesToProperty -->
@@ -1096,7 +1120,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a measurement and the observable property that it relates to.</rdfs:comment>
         <rdfs:label>relatesToProperty</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/isLocatedNear -->
@@ -1108,7 +1132,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between a near-body wearable device and the person it is located near.</rdfs:comment>
         <rdfs:label>isLocatedNear</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/isLocatedOn -->
@@ -1119,10 +1143,10 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The relationship between an on-body wearable device and the person it is located on.</rdfs:comment>
         <rdfs:label>isLocatedOn</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -1130,7 +1154,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFDiagnosis -->
@@ -1141,7 +1165,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has been diagnosed with AF or not.</rdfs:comment>
         <rdfs:label>hasAFDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScore -->
@@ -1253,7 +1277,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The modified HARMS2-AF score of a monitored person. This score assesses an individual&apos;s risk of developing AF. The value is the total of the risk factor points.</rdfs:comment>
         <rdfs:label>hasAFRiskScore</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreAge1 -->
@@ -1280,7 +1304,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If age is between 60 and 64, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreAge1</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreAge2 -->
@@ -1307,7 +1331,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If age &gt;= 65, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreAge2</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreAlcohol1 -->
@@ -1334,7 +1358,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If alcohol consumption (weekly) is between 7 and 14, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreAlcohol1</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreAlcohol2 -->
@@ -1361,7 +1385,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If alcohol consumption (weekly) &gt;= 15, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreAlcohol2</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreHypertension -->
@@ -1388,7 +1412,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If hypertension has been diagnosed, assign 4 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreHypertension</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreMaleSex -->
@@ -1415,7 +1439,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If person belongs to the male sex category, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreMaleSex</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreRaisedBMI -->
@@ -1442,7 +1466,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If person has BMI &gt;= 30, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreRaisedBMI</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreSleepApnoea -->
@@ -1469,7 +1493,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If sleep apnoea has been diagnosed, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreSleepApnoea</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAFRiskScoreSmoking -->
@@ -1496,7 +1520,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the AF Risk Score. If person is a current smoker, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasAFRiskScoreSmoking</rdfs:label>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://purl.org/afmo#hasAbnormalLVFunctionDiagnosis -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasAbnormalLVFunctionDiagnosis">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Boolean value representing whether a person has been diagnosed with abnormal left ventricular (LV) function or not.</rdfs:comment>
+        <rdfs:label>hasAbnormalLVFunctionDiagnosis</rdfs:label>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://purl.org/afmo#hasAbnormalLiverFunctionDiagnosis -->
@@ -1507,7 +1542,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has been diagnosed with abnormal liver function or not.</rdfs:comment>
         <rdfs:label>hasAbnormalLiverFunctionDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAbnormalRenalFunctionDiagnosis -->
@@ -1518,7 +1553,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has been diagnosed with abnormal renal function or not.</rdfs:comment>
         <rdfs:label>hasAbnormalRenalFunctionDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAge -->
@@ -1529,7 +1564,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>A person&apos;s age in years.</rdfs:comment>
         <rdfs:label>hasAge</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAnemiaDiagnosis -->
@@ -1541,7 +1576,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has been diagnosed with anemia or not.</rdfs:comment>
         <rdfs:label>hasAnemiaDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasAverageDailySteps -->
@@ -1552,7 +1587,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Average number of daily steps calculated monthly.</rdfs:comment>
         <rdfs:label>hasAverageDailySteps</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBMI -->
@@ -1563,7 +1598,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>A person&apos;s body mass index.</rdfs:comment>
         <rdfs:label>hasBMI</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingHistory -->
@@ -1575,7 +1610,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has a history of major bleeding or not.</rdfs:comment>
         <rdfs:label>hasBleedingHistory</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingHistoryOrPredisposition -->
@@ -1586,7 +1621,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Boolean value representing whether a person has a bleeding history/predisposition (i.e. diagnosed with anemia) or not.</rdfs:comment>
         <rdfs:label>hasBleedingHistoryOrPredisposition</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScore -->
@@ -1667,7 +1702,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>The HAS-BLED score of a monitored person who has been diagnosed with AF.  This score assesses an individual&apos;s risk of major bleeding. The value is the total of the risk factor points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScore</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreAlcohol -->
@@ -1695,7 +1730,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If alcohol consumption &gt; 8 units weekly, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreAlcohol</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreBleedingHistoryOrPred -->
@@ -1722,7 +1757,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If person has person history of bleeding or if anemia is diagnosed, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreBleedingHistoryOrPred</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreDrugs -->
@@ -1749,7 +1784,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If ntiplatelet agents or non-steroidal anti-inflammatory medication is taken, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreDrugs</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreElderly -->
@@ -1776,7 +1811,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If age &gt; 65, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreElderly</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreHypertension -->
@@ -1804,7 +1839,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If hypertension is diagnosed and systolic BP &gt; 160 mmHg, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreHypertension</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreLabileINRs -->
@@ -1835,7 +1870,7 @@ INR: blood test that indicates how long it takes for a person&apos;s blood to cl
 TTR: percentage of time that a person&apos;s INR is within the target range.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreLabileINRs</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreLiver -->
@@ -1863,7 +1898,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If liver dysfnction is diagnosed, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreLiver</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreRenal -->
@@ -1890,7 +1925,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Bleeding Risk Score. If renal dysfunction is diagnosed, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreRenal</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasBleedingRiskScoreStrokeHistory -->
@@ -1917,7 +1952,18 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Bleed Risk Score. If person has history of stroke, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasBleedingRiskScoreStrokeHistory</rdfs:label>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://purl.org/afmo#hasCHFDiagnosis -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasCHFDiagnosis">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Boolean value representing whether a person has been diagnosed with congestive heart failure or not.</rdfs:comment>
+        <rdfs:label>hasCHFDiagnosis</rdfs:label>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://purl.org/afmo#hasCHFOrLVDysfunction -->
@@ -1929,7 +1975,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has been diagnosed with congestive heart failure/left ventricular dysfunction or not.</rdfs:comment>
         <rdfs:label>hasCHFOrLVDysfunctionDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasDiabetesMellitusDiagnosis -->
@@ -1940,7 +1986,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a diagnosis of diabetes mellitus or not.</rdfs:comment>
         <rdfs:label>hasDiabetesMellitusDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasDuration -->
@@ -1951,7 +1997,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Duration in seconds of a continuous measurement.</rdfs:comment>
         <rdfs:label>hasDuration</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasEndTime -->
@@ -1962,7 +2008,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The timestamp at which a continuous measurememt ends.</rdfs:comment>
         <rdfs:label>hasEndTime</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHeight -->
@@ -1974,7 +2020,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The height in centimeters (cm) of a person.</rdfs:comment>
         <rdfs:label>hasHeight</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHistoryOfMyocardialInfarction -->
@@ -1985,7 +2031,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a history of myocardial infarction or not.</rdfs:comment>
         <rdfs:label>hasHistoryOfMyocardialInfarction</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHistoryOfStroke -->
@@ -1996,7 +2042,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a history of stroke only or not.</rdfs:comment>
         <rdfs:label>hasHistoryOfStroke</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHistoryOfStrokeOrSimilar -->
@@ -2007,7 +2053,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a history of stroke and other stroke-like conditions or not.</rdfs:comment>
         <rdfs:label>hasHistoryOfStrokeOrSimilar</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasHypertensionDiagnosis -->
@@ -2018,7 +2064,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a diagnosis of hypertension or not.</rdfs:comment>
         <rdfs:label>hasHypertensionDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasLead -->
@@ -2105,7 +2151,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The lead that an ECG measurement has. Leads are also known as channels. Note that an ECG can have multiple leads, e.g. a two-channel ECG has two different leads.</rdfs:comment>
         <rdfs:label>hasLead</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasNumberOfLeads -->
@@ -2192,7 +2238,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The number of leads that an ECG measurement has.</rdfs:comment>
         <rdfs:label>hasNumberOfLeads</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSalutation -->
@@ -2203,7 +2249,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The combination of a person&apos;s title and last name used in correspondence salutations.</rdfs:comment>
         <rdfs:label>hasSalutation</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSamplingFrequency -->
@@ -2214,7 +2260,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The sampling frequency in Hz of an ECG measurement.</rdfs:comment>
         <rdfs:label>hasSamplingFrequency</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasSleepApnoeaDiagnosis -->
@@ -2225,7 +2271,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has a diagnosis of sleep apnoea or not.</rdfs:comment>
         <rdfs:label>hasSleepApnoeaDiagnosis</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStartTime -->
@@ -2236,7 +2282,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The timestamp at which a continuous measurement starts.</rdfs:comment>
         <rdfs:label>hasStartTime</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScore -->
@@ -2318,7 +2364,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The CHA2DS2-VASc score of a monitored person who has been diagnosed with AF. This score assesses an individual&apos;s risk of stroke. The value is the total of the risk factor points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScore</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreAge1 -->
@@ -2345,7 +2391,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If age is &gt;= 75, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreAge1</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreAge2 -->
@@ -2372,7 +2418,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If age is between 65 and 74, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreAge2</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreDiabetes -->
@@ -2399,7 +2445,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If person has diagnosis of diabetes, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreDiabetes</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreHeart -->
@@ -2427,7 +2473,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If diagnosed with congestive heart failure or left ventricular dysfunction, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreHeart</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreHypertension -->
@@ -2455,7 +2501,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If person has history of or is currently diagnosed with hypertension, assign 4 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreHypertension</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreSexCategory -->
@@ -2482,7 +2528,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If person&apos;s sex category is female, assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreSexCategory</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreStrokeHistory -->
@@ -2509,7 +2555,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If person has history of stroke/ischemic attack/thromboembolism, assign 2 points, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreStrokeHistory</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasStrokeRiskScoreVascularDisease -->
@@ -2536,7 +2582,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Risk factor from the Stroke Risk Score. If person has current or prior vascular disease (myocardial infarction/peripheral artery disease/aortic plaque), assign 1 point, else assign 0 points.</rdfs:comment>
         <rdfs:label>hasStrokeRiskScoreVascularDisease</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasTTR -->
@@ -2547,7 +2593,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>A person&apos;s time in therapeutic range (TTR), i.e. the percentage of time their international normalised ratio (INR) is within the target range.</rdfs:comment>
         <rdfs:label>hasTTR</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasVascularDisease -->
@@ -2558,7 +2604,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person has vascular disease (prior myocardial infarction, peripheral artery disease, or aortic plaque) or not.</rdfs:comment>
         <rdfs:label>hasVascularDisease</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#hasWeeklyAlcoholicDrinks -->
@@ -2569,7 +2615,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The number of alcoholic drinks that a person consumes in a week, where one drink is defined as defined as 8 g of alcohol.</rdfs:comment>
         <rdfs:label>hasWeeklyAlcoholicDrinks</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#takesAntiplateletMedication -->
@@ -2580,7 +2626,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person is currently taking antiplatelet medication or not.</rdfs:comment>
         <rdfs:label>takesAntiplateletMedication</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#takesNSAIDs -->
@@ -2591,7 +2637,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>Boolean value representing whether a person is currently taking non-steroidal anti-inflammatory drugs (NSAID) or not.</rdfs:comment>
         <rdfs:label>takesNSAIDs</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/afmo#weight -->
@@ -2603,7 +2649,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The weight in kilograms (kg) of a person.</rdfs:comment>
         <rdfs:label>hasWeight</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/birthday -->
@@ -2616,7 +2662,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>The date on which a person was born.</rdfs:comment>
         <rdfs:label>hasDateOfBirth</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/firstName -->
@@ -2629,7 +2675,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>A person&apos;s first or given name as per their identity document.</rdfs:comment>
         <rdfs:label>hasFirstName</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
@@ -2640,7 +2686,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>A person&apos;s name.</rdfs:comment>
         <rdfs:label>hasFullName</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/surname -->
@@ -2654,7 +2700,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:comment>A person&apos;s last name, family name, or surname as per their identity document.</rdfs:comment>
         <rdfs:label>hasLastName</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/title -->
@@ -2671,7 +2717,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>A word that is used before someone&apos;s name, stating their social rank, qualifications, position in an organization, gender, etc.</owl:annotatedTarget>
         <rdfs:isDefinedBy>https://dictionary.cambridge.org/dictionary/english/title Accessed 15 August 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- https://saref.etsi.org/core/hasTimestamp -->
@@ -2683,7 +2729,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">hasTimestamp</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://saref.etsi.org/core/hasValue -->
@@ -2695,10 +2741,10 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">hasValue</rdfs:label>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -2706,7 +2752,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_0050830 -->
@@ -2731,7 +2777,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:http://www.nlm.nih.gov/medlineplus/ency/article/000170.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.nhlbi.nih.gov/health/health-topics/topics/pad/</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_0050847 -->
@@ -2769,7 +2815,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2765300/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.nhlbi.nih.gov/health/health-topics/topics/sleepapnea/</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_0060224 -->
@@ -2808,7 +2854,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:http://www.mayoclinic.org/diseases-conditions/atrial-fibrillation/basics/definition/con-20027014</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www.nhlbi.nih.gov/health/health-topics/topics/af</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_10230 -->
@@ -2826,7 +2872,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <rdfs:label>AorticAtherosclerosis</rdfs:label>
         <skos:definition>Atherosclerosis of the aorta is a progressive buildup of plaque in the largest artery in the body, i.e. the aorta.</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_10763 -->
@@ -2866,7 +2912,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Hypertension</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/24352797</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_5844 -->
@@ -2905,7 +2951,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Myocardial_infarction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/17951287</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_6000 -->
@@ -2948,7 +2994,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Heart_disease</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_9351 -->
@@ -2988,7 +3034,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>url:https://medlineplus.gov/diabetes.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.ncbi.nlm.nih.gov/pubmed/9686693</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/DOID_9970 -->
@@ -3025,7 +3071,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007638"/>
         <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Obesity</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0001297 -->
@@ -3062,7 +3108,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>Sudden impairment of blood flow to a part of the brain due to occlusion or rupture of an artery to the brain.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0001903 -->
@@ -3112,7 +3158,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>A reduction in erythrocytes volume or hemoglobin concentration.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0001907 -->
@@ -3146,7 +3192,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>The formation of a blood clot inside a blood vessel that subsequently travels through the blood stream from the site where it formed to another location in the body, generally leading to vascular occlusion at the distant site.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0002140 -->
@@ -3172,7 +3218,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>Acute ischemic stroke (AIS) is defined by the sudden loss of blood flow to an area of the brain with the resulting loss of neurologic function. It is caused by thrombosis or embolism that occludes a cerebral vessel supplying a specific area of the brain. During a vessel occlusion, there is a core area where damage to the brain is irreversible and an area of penumbra where the brain has lost function owing to decreased blood flow but is not irreversibly injured.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:32054610</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0002326 -->
@@ -3216,7 +3262,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>Transient ischaemic attacks</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0005162 -->
@@ -3245,7 +3291,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>PMID:10956313</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.heart.org/HEARTORG/Conditions/HeartFailure/AboutHeartFailure/Types-of-Heart-Failure_UCM_306323_Article.jsp#.WmeKyJM-dL4</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0011675 -->
@@ -3317,7 +3363,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:DDD_dbrown</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19063792</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0012211 -->
@@ -3366,7 +3412,7 @@ TTR: percentage of time that a person&apos;s INR is within the target range.</rd
         <owl:annotatedTarget>An abnormal functionality of the kidney.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0012824 -->
@@ -3407,7 +3453,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>The intensity or degree of a manifestation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/HP_0031865 -->
@@ -3427,7 +3473,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>Any functional anomaly of the liver.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0000407 -->
@@ -3458,7 +3504,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/fainting</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/syncope</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0000462 -->
@@ -3479,7 +3525,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <oboInOwl:hasDbXref>url:https://www.merriam-webster.com/dictionary/symptom</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:https://www.nature.com/subjects/signs-and-symptoms</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0000530 -->
@@ -3508,7 +3554,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Palpitation</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=palpitation</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0000576 -->
@@ -3537,7 +3583,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>Pressure, burning, or numbness in the chest.</owl:annotatedTarget>
         <rdfs:comment>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D002637. Accessed 15 August 2023.</rdfs:comment>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0000610 -->
@@ -3559,7 +3605,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>A  balance symptom that is characterized by a sensation of unsteadiness accompanied by a feeling of movement within the head.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=dizziness</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0019153 -->
@@ -3589,7 +3635,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>A respiratory abnormality that is characterized by difficult or labored respiration.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=dyspnea</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0019177 -->
@@ -3614,7 +3660,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <owl:annotatedTarget>A neurological and physiological symptom that is characterized by a weariness or exhaustion from labor, exertion, or stress.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>url:http://www2.merriam-webster.com/cgi-bin/mwmednlm?book=Medical&amp;va=fatigue</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/SYMP_0020032 -->
@@ -3627,7 +3673,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <rdfs:label>ChestTightness</rdfs:label>
         <skos:definition>A chest discomfort that is characterized by any type of pain or discomfort between your upper belly and lower neck.</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#ActivityProperty -->
@@ -3637,7 +3683,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
         <rdfs:comment>Class to group those properties related to the physical activity of monitored individuals.</rdfs:comment>
         <rdfs:label>ActivityProperty</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#AgeGroup -->
@@ -3668,7 +3714,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
 - Elderly: Above 60</rdfs:comment>
         <rdfs:label>AgeGroup</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#AlcoholConsumptionLevel -->
@@ -3707,7 +3753,7 @@ Disabling: Normal daily activity discontinued.</rdfs:comment>
 
 Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#BMICategory -->
@@ -3735,7 +3781,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
 - Obsese: 30.0 and above</rdfs:comment>
         <rdfs:label>BMICategory</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#BeatsPerMinute -->
@@ -3758,7 +3804,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>The number of heartbeats measured per minute time.</owl:annotatedTarget>
         <rdfs:isDefinedBy>NCI Thesaurus, https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C49673. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#Biosignal -->
@@ -3787,7 +3833,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>Biological signals, or biosignals, are space, time, or space-time records of a biological event such as a beating heart or a contracting muscle.</owl:annotatedTarget>
         <rdfs:isDefinedBy>M. Escabí, “Biosignal Processing,” in Introduction to Biomedical Engineering, ch. 11, pp. 667–746, Elsevier Inc., 3 ed., 2012. https://doi.org/10.1016/B978-0-12-374979-6.00011-3</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#BloodPressure -->
@@ -3804,7 +3850,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>Pressure of the blood on the arteries and other blood vessels.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D001794. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#BloodPressureMeasurement -->
@@ -3826,7 +3872,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A measuremement of the pressure of the blood on the arteries and other blood vessels.</rdfs:comment>
         <rdfs:label>BloodPressureMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#BodyData -->
@@ -3836,7 +3882,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Data related to a person&apos;s body.</rdfs:comment>
         <rdfs:label>BodyData</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#BreathsPerMinute -->
@@ -3859,7 +3905,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>The number of breaths (inhalation and exhalation) taken per minute time.</owl:annotatedTarget>
         <rdfs:isDefinedBy>NCI Thesaurus, https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C49673. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#ContinuousMeasurement -->
@@ -3888,7 +3934,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Continuous measurements vary continuously and must be recorded in real time.</rdfs:comment>
         <rdfs:label>ContinuousMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DailySteps -->
@@ -3898,7 +3944,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Total number of steps taken in a day.</rdfs:comment>
         <rdfs:label>DailySteps</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DailyStepsMeasurement -->
@@ -3920,7 +3966,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>An aggregation of steps taken on a particular day.</rdfs:comment>
         <rdfs:label>DailyStepsMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DemographicData -->
@@ -3930,7 +3976,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Data related to a person&apos;s demographics.</rdfs:comment>
         <rdfs:label>DemographicData</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DemographicRiskFactor -->
@@ -3942,7 +3988,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment xml:lang="en">A class to group risk factors for atrial fribrillation related to a person&apos;s demographics. Demographics:  the qualities (such as age, sex, and income) of a specific group of people.</rdfs:comment>
         <rdfs:label>DemographicRiskFactor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DetectedAFState -->
@@ -3960,7 +4006,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Class to represent one of two possible values for a person&apos;s atrial fibrillation state; i.e. detected or not.</rdfs:comment>
         <rdfs:label>DetectedAFState</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DetectedSituation -->
@@ -3970,7 +4016,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Current health state(s) of a monitored person.</rdfs:comment>
         <rdfs:label>DetectedSituation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#Diagnosis -->
@@ -4007,7 +4053,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>A diagnosis of a medical condition. Diagnosis: the determination of the nature of a disease or condition, or the distinguishing of one disease or condition from another.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://meshb.nlm.nih.gov/record/ui?ui=D003933. Accessed 19 September 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#DiagnosticRecommendation -->
@@ -4017,7 +4063,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A recommendation that involves consultatation with a physician and/or diagnostic procedures.</rdfs:comment>
         <rdfs:label>DiagnosticRecommendation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DiastolicBloodPressure -->
@@ -4034,7 +4080,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:isDefinedBy>“Diastole.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/diastole. Accessed 18 September 2023.</rdfs:isDefinedBy>
         <rdfs:isDefinedBy>“Diastolic blood pressure.” Merriam-Webster.com Medical Dictionary, Merriam-Webster, https://www.merriam-webster.com/medical/diastolic%20blood%20pressure. Accessed 18 September 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#DiastolicBloodPressureMeasurement -->
@@ -4050,7 +4096,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A measuremement of the diastolic blood pressure.</rdfs:comment>
         <rdfs:label>DiastolicBloodPressureMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#DiscreteMeasurement -->
@@ -4066,7 +4112,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Discrete measurements correspond to particular instants in time.</rdfs:comment>
         <rdfs:label>DiscreteMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#ECG -->
@@ -4091,7 +4137,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>Recording of the moment-to-moment electromotive forces of the heart as projected onto various sites on the body&apos;s surface, delineated as a scalar function of time. The recording is monitored by a tracing on slow moving chart paper or by observing it on a cardioscope, which is a cathode ray tube display.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D004562. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#ECGMeasurement -->
@@ -4128,7 +4174,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>An electrocardiogram measurement.</rdfs:comment>
         <rdfs:label>ECGMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#ExperiencedSymptom -->
@@ -4137,7 +4183,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A symptom being experienced by a monitored person.</rdfs:comment>
         <rdfs:label>ExperiencedSymptom</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#GenderIdentity -->
@@ -4163,7 +4209,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>An individual’s personal sense of being a man, woman, boy, girl, or something else.</owl:annotatedTarget>
         <rdfs:isDefinedBy>McClure, Robert C., et al. &quot;Gender harmony: improved standards to support affirmative care of gender-marginalized people through inclusive gender and sex representation.&quot; Journal of the American Medical Informatics Association 29.2 (2022): 354-363. https://doi-org.ezproxy.uct.ac.za/10.1093/jamia/ocab196</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#HealthyBMI -->
@@ -4172,8 +4218,8 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#IncreaseBMI"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#ReduceBMI"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#IncreaseWeight"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#ReduceWeight"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4181,7 +4227,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Recommendation to target a healthy BMI.</rdfs:comment>
         <rdfs:label>HealthyBMI</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#HeartRate -->
@@ -4198,7 +4244,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>The number of times the heart ventricles contract per unit of time, usually per minute.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D006339. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#HeartRateMeasurement -->
@@ -4220,7 +4266,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A measurement of the number of times the heart ventricles contract per unit of time, usually per minute.</rdfs:comment>
         <rdfs:label>HeartRateMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#HeartRateMonitor -->
@@ -4236,7 +4282,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Heart rate monitor as an example of a type of wearable device.</rdfs:comment>
         <rdfs:label>HeartRateMonitor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#IncreasePhysicalActivity -->
@@ -4246,7 +4292,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Recommendation to increase physical activity.</rdfs:comment>
         <rdfs:label>IncreasePhysicalActivity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#LifestyleData -->
@@ -4256,7 +4302,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Qualities related to a person&apos;s lifestyle.</rdfs:comment>
         <rdfs:label>LifestyleData</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#LifestyleRecommendation -->
@@ -4266,7 +4312,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A recommendation that involves lifestyle modification.</rdfs:comment>
         <rdfs:label>LifestyleRecommendation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#LifestyleRiskFactor -->
@@ -4277,15 +4323,24 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment xml:lang="en">A class to group risk factors for atrial fribrillation related to a person&apos;s lifestyle and habits.</rdfs:comment>
         <rdfs:label>LifestyleRiskFactor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#MajorBleeding -->
 
     <owl:Class rdf:about="http://purl.org/afmo#MajorBleeding">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#MedicalCondition"/>
+        <oboInOwl:hasDbXref>UMLS:C5243991</oboInOwl:hasDbXref>
+        <rdfs:comment>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke.</rdfs:comment>
+        <rdfs:label>MajorBleeding</rdfs:label>
     </owl:Class>
-    
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/afmo#MajorBleeding"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Pisters, R.; Lane, D. A.; Nieuwlaat, R.; de Vos, C. B.; Crijns, H. J. G. M.; and Lip, G. Y. H. 2010. A Novel User-Friendly Score (HAS-BLED) To Assess 1-Year Risk of Major Bleeding in Patients With Atrial Fibrillation: The Euro Heart Survey. Chest, 138(5): 1093–1100.</rdfs:isDefinedBy>
+    </owl:Axiom>
+
 
 
     <!-- http://purl.org/afmo#MedicalCondition -->
@@ -4306,7 +4361,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A broad term that includes diseases, illnesses, disorders, defects and dysfunctions.</rdfs:comment>
         <rdfs:label>MedicalCondition</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#MedicalHistory -->
@@ -4322,7 +4377,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>A record of a patient&apos;s background regarding health and the occurrence of disease events of the individual.</owl:annotatedTarget>
         <rdfs:isDefinedBy>National Cancer Insititue (NCI) Thesaurus. https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&amp;code=C18772 Accessed 19 September 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#MedicalRiskFactor -->
@@ -4332,7 +4387,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment xml:lang="en">A class to group risk factors for atrial fribrillation related to a person&apos;s medical history.</rdfs:comment>
         <rdfs:label>MedicalRiskFactor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#MedicationRecommendation -->
@@ -4342,7 +4397,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A recommendation that involves medication or drugs.</rdfs:comment>
         <rdfs:label>MedicationRecommendation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#MillimetersOfMercury -->
@@ -4366,7 +4421,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>A non-SI unit of pressure equal to 1/760 of a standard atmosphere (a standard atmosphere being defined as equal to 101 325 pascals). One Torr is equal to 133.3223684 pascals.</owl:annotatedTarget>
         <rdfs:isDefinedBy>NCI Thesaurus, https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C49670. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#MonitoredPerson -->
@@ -4704,7 +4759,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A person being monitored by the system.</rdfs:comment>
         <rdfs:label>MonitoredPerson</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#OralAnticoagulationTherapy -->
@@ -4713,8 +4768,8 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/afmo#OATContraindicated"/>
-                    <rdf:Description rdf:about="http://purl.org/afmo#OATRecommended"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#OAC-Contraindicated"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#OAC-Recommended"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4722,7 +4777,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Whether oral anticoagulation therapy (OAT) is recommended or contraindicated. This is primarily based on the HAS-BLED score for major bleeding risk.</rdfs:comment>
         <rdfs:label>OralAnticoagulationTherapy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#PPG -->
@@ -4746,7 +4801,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <owl:annotatedTarget>Plethysmographic determination in which the intensity of light reflected from the skin surface and the red cells below is measured to determine the blood volume of the respective area. There are two types, transmission and reflectance.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D017156. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#PPGMeasurement -->
@@ -4762,7 +4817,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>A plethysmography measurement.</rdfs:comment>
         <rdfs:label>PPGMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#PersonalData -->
@@ -4771,7 +4826,7 @@ Where a standard drink is defined as defined as 8 g of alcohol.</rdfs:isDefinedB
         <rdfs:comment>Class to group various types of data about a person, including lifestyle, body, and demographic data.</rdfs:comment>
         <rdfs:label>PersonalData</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#PhysicalActivityLevel -->
@@ -4805,7 +4860,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>Physical activity is any bodily movement produced by skeletal muscles that requires energy expenditure.</owl:annotatedTarget>
         <rdfs:isDefinedBy>Caspersen CJ, Powell KE, Christenson GM. Physical activity, exercise, and physical fitness: definitions and distinctions for health-related research. Public Health Rep. 1985 Mar-Apr;100(2):126-31. PMID: 3920711; PMCID: PMC1424733.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#Physician -->
@@ -4827,7 +4882,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>A person qualified to practise medicine, especially one who specializes in diagnosis and medical treatment as distinct from surgery.</owl:annotatedTarget>
         <rdfs:isDefinedBy>https://www.oxfordlearnersdictionaries.com/definition/english/physician, accessed 08 August 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#PredictedSituation -->
@@ -4837,7 +4892,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>Future health state(s) of a monitored person.</rdfs:comment>
         <rdfs:label>PredictedSituation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#QuitSmoking -->
@@ -4847,7 +4902,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>Recommendation to quit smoking.</rdfs:comment>
         <rdfs:label>QuitSmoking</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#Recommendation -->
@@ -4856,7 +4911,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>A recommendation that is suggested regarding a monitored person in order to mitigate adverse health situations.</rdfs:comment>
         <rdfs:label>Recommendation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#ReduceAlcoholConsumption -->
@@ -4866,7 +4921,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>Recommendation to reduce alcohol consumption.</rdfs:comment>
         <rdfs:label>ReduceAlcoholConsumption</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#RespiratoryRate -->
@@ -4883,7 +4938,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>The number of times an organism breathes with the lungs (respiration) per unit time, usually per minute.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D056152. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#RespiratoryRateMeasurement -->
@@ -4905,7 +4960,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>A measurement of the number of times an organism breathes with the lungs (respiration) per unit time, usually per minute.</rdfs:comment>
         <rdfs:label>RespiratoryRateMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#RiskFactor -->
@@ -4931,7 +4986,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget xml:lang="en">An aspect of personal behavior or lifestyle, environmental exposure, inborn or inherited characteristic, which, based on epidemiological evidence, is known to be associated with a health-related condition considered important to prevent.</owl:annotatedTarget>
         <rdfs:isDefinedBy>Medical Subject Headings (MeSH)</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#RiskLevel -->
@@ -4950,7 +5005,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>Class to represent the levels of risk that exist.</rdfs:comment>
         <rdfs:label>RiskLevel</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#SexForClinicalUse -->
@@ -4975,7 +5030,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>Summary sex classification element based on one or more clinical observations such as an organ survey, hormone levels, and chromosomal analysis.</owl:annotatedTarget>
         <rdfs:isDefinedBy>McClure, Robert C., et al. &quot;Gender harmony: improved standards to support affirmative care of gender-marginalized people through inclusive gender and sex representation.&quot; Journal of the American Medical Informatics Association 29.2 (2022): 354-363. https://doi-org.ezproxy.uct.ac.za/10.1093/jamia/ocab196</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#Situation -->
@@ -4990,7 +5045,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>A higher, domain-relevant concept represnting an an abstract state of affairs that is an interpretation of sensor data.</owl:annotatedTarget>
         <rdfs:isDefinedBy>Ye, Juan, Simon Dobson, and Susan McKeever. &quot;Situation identification techniques in pervasive computing: A review.&quot; Pervasive and mobile computing 8.1 (2012): 36-66. https://doi.org/10.1016/j.pmcj.2011.01.004</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#SmokingStatus -->
@@ -5028,7 +5083,7 @@ Highly active: &gt;=12,500</rdfs:comment>
 - Former smoker: a person who has smoked more than 100 cigarettes in their lifetime but has not smoked in the last 28 days. The international convention is to treat someone as an ex-smoker once they have been smokefree for one month (at least 28 days).
 - Never smoker: a person who has not smoked more than 100 cigarettes in their lifetime and does not currently smoke.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/afmo#StepsPerDay -->
@@ -5044,7 +5099,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>The number of steps a person takes in a day.</rdfs:comment>
         <rdfs:label>StepsPerDay</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#SymptomState -->
@@ -5062,7 +5117,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>Class to represent one of two possible values for the symptom state in a person with detected AF; i.e. symptomatic or not.</rdfs:comment>
         <rdfs:label>SymptomState</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#SystolicBloodPressure -->
@@ -5070,7 +5125,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/afmo#SystolicBloodPressure">
         <rdfs:subClassOf rdf:resource="http://purl.org/afmo#BloodPressure"/>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#SystolicBloodPressureMeasurement -->
@@ -5086,7 +5141,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>A measuremement of the systolic blood pressure.</rdfs:comment>
         <rdfs:label>SystolicBloodPressureMeasurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/afmo#VitalSign -->
@@ -5121,7 +5176,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <owl:annotatedTarget>The signs of life that may be monitored or measured, namely pulse rate, respiratory rate, body temperature, and blood pressure.</owl:annotatedTarget>
         <rdfs:isDefinedBy>The Medical Subject Headings (MeSH) Thesaurus, https://www.ncbi.nlm.nih.gov/mesh/?term=D055986. Accessed 21 June 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
@@ -5160,7 +5215,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:label>Person</rdfs:label>
         <sw-vocab-status:nsterm_status>stable</sw-vocab-status:nsterm_status>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/core/Device -->
@@ -5182,7 +5237,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">Device</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/core/Measurement -->
@@ -5219,7 +5274,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/core/Property -->
@@ -5241,7 +5296,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment>A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature.</rdfs:comment>
         <rdfs:label>Property</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/core/UnitOfMeasure -->
@@ -5257,7 +5312,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
         <rdfs:label xml:lang="en">UnitOfMeasure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/BiometricProperty -->
@@ -5279,7 +5334,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment xml:lang="en">Class to group those properties related to the biometric characteristics of monitored individuals.</rdfs:comment>
         <rdfs:label xml:lang="en">BiometricProperty</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/NearBodyWearable -->
@@ -5296,7 +5351,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment xml:lang="en">A near-body wearable is a wearable located near a physical body.</rdfs:comment>
         <rdfs:label xml:lang="en">NearBodyWearable</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/OnBodyWearable -->
@@ -5312,7 +5367,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment xml:lang="en">An on-body wearable is a wearable having a direct contact with a physical body.</rdfs:comment>
         <rdfs:label xml:lang="en">OnBodyWearable</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://saref.etsi.org/saref4wear/Wearable -->
@@ -5322,10 +5377,10 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:comment xml:lang="en">A wearable device is a device that is intended to be located near, on or in an organism.</rdfs:comment>
         <rdfs:label xml:lang="en">WearableDevice</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -5333,7 +5388,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/afmo#AFDetected -->
@@ -5350,7 +5405,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#AFNotDetected -->
@@ -5367,23 +5422,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#AbnormalLiverFunction -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AbnormalLiverFunction">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0031865"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#AbnormalRenalFunction -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AbnormalRenalFunction">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0012211"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Active -->
@@ -5391,23 +5430,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Active">
         <rdf:type rdf:resource="http://purl.org/afmo#PhysicalActivityLevel"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#Anemia -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Anemia">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0001903"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#AorticAtherosclerosis -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AorticAtherosclerosis">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_10230"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Asymptomatic -->
@@ -5415,23 +5438,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Asymptomatic">
         <rdf:type rdf:resource="http://purl.org/afmo#SymptomState"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#AtrialFibrillation -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#AtrialFibrillation">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0060224"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#CongestiveHeartFailure -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#CongestiveHeartFailure">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_6000"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#CurrentSmoker -->
@@ -5464,15 +5471,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Restriction>
         </rdf:type>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#DiabetesMellitus -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#DiabetesMellitus">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_9351"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Disabling -->
@@ -5490,8 +5489,9 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+        <afmo:isMoreSevereThan rdf:resource="http://purl.org/afmo#Severe"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#EarlyMiddleAged -->
@@ -5511,7 +5511,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Elderly -->
@@ -5532,7 +5532,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         </rdf:type>
         <afmo:isOlderThan rdf:resource="http://purl.org/afmo#LateMiddleAged"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Female -->
@@ -5562,7 +5562,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#FormerSmoker -->
@@ -5595,7 +5595,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Restriction>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#HighConsumption -->
@@ -5630,7 +5630,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isHigherConsumptionThan rdf:resource="http://purl.org/afmo#IntermediateConsumption"/>
         <afmo:isHigherConsumptionThan rdf:resource="http://purl.org/afmo#LowConsumption"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#HighRisk -->
@@ -5648,7 +5648,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#HighlyActive -->
@@ -5656,23 +5656,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#HighlyActive">
         <rdf:type rdf:resource="http://purl.org/afmo#PhysicalActivityLevel"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#Hypertension -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Hypertension">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#IncreaseBMI -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IncreaseBMI">
-        <rdf:type rdf:resource="http://purl.org/afmo#HealthyBMI"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#IncreaseDailySteps -->
@@ -5680,7 +5664,15 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#IncreaseDailySteps">
         <rdf:type rdf:resource="http://purl.org/afmo#IncreasePhysicalActivity"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- http://purl.org/afmo#IncreaseWeight -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IncreaseWeight">
+        <rdf:type rdf:resource="http://purl.org/afmo#HealthyBMI"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- http://purl.org/afmo#IntermediateConsumption -->
@@ -5714,23 +5706,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         </rdf:type>
         <afmo:isHigherConsumptionThan rdf:resource="http://purl.org/afmo#LowConsumption"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#IschemicStroke -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#IschemicStroke">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0002140"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#LVDysfunction -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#LVDysfunction">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0005162"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#LateMiddleAged -->
@@ -5751,7 +5727,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         </rdf:type>
         <afmo:isOlderThan rdf:resource="http://purl.org/afmo#EarlyMiddleAged"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#LowActive -->
@@ -5759,7 +5735,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#LowActive">
         <rdf:type rdf:resource="http://purl.org/afmo#PhysicalActivityLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#LowConsumption -->
@@ -5792,7 +5768,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Restriction>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#LowRisk -->
@@ -5810,15 +5786,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#MajorBleeding -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#MajorBleeding">
-        <rdf:type rdf:resource="http://purl.org/afmo#MajorBleeding"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Male -->
@@ -5848,7 +5816,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Mild -->
@@ -5866,8 +5834,9 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+        <afmo:isMoreSevereThan rdf:resource="http://purl.org/afmo#None"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Moderate -->
@@ -5885,8 +5854,9 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+        <afmo:isMoreSevereThan rdf:resource="http://purl.org/afmo#Mild"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#ModerateRisk -->
@@ -5904,15 +5874,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#MyocardialInfarction -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#MyocardialInfarction">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_5844"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#NeverSmoker -->
@@ -5945,7 +5907,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Restriction>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Nonbinary -->
@@ -5965,7 +5927,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#None -->
@@ -5984,7 +5946,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Normal -->
@@ -6007,23 +5969,23 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Obese"/>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Overweight"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://purl.org/afmo#OATContraindicated -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OATContraindicated">
+    <!-- http://purl.org/afmo#OAC-Contraindicated -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OAC-Contraindicated">
         <rdf:type rdf:resource="http://purl.org/afmo#OralAnticoagulationTherapy"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://purl.org/afmo#OATRecommended -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OATRecommended">
+    <!-- http://purl.org/afmo#OAC-Recommended -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#OAC-Recommended">
         <rdf:type rdf:resource="http://purl.org/afmo#OralAnticoagulationTherapy"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Obese -->
@@ -6046,7 +6008,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isHeavierThan rdf:resource="http://purl.org/afmo#Overweight"/>
         <afmo:isHeavierThan rdf:resource="http://purl.org/afmo#Underweight"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Overweight -->
@@ -6069,61 +6031,15 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isHeavierThan rdf:resource="http://purl.org/afmo#Underweight"/>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Obese"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://purl.org/afmo#Palpitation001 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Palpitation001">
-        <rdf:type rdf:resource="http://purl.org/afmo#ExperiencedSymptom"/>
-    </owl:NamedIndividual>
-    
+    <!-- http://purl.org/afmo#ReduceWeight -->
 
-
-    <!-- http://purl.org/afmo#PeripheralArteryDisease -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#PeripheralArteryDisease">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0050830"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#ReduceBMI -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#ReduceBMI">
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#ReduceWeight">
         <rdf:type rdf:resource="http://purl.org/afmo#HealthyBMI"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#SBPMeasurement001 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement001">
-        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
-        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
-        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">161.0</core:hasValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#SBPMeasurement002 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement002">
-        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
-        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
-        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">159.0</core:hasValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#SBPMeasurement003 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SBPMeasurement003">
-        <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressureMeasurement"/>
-        <core:relatesToProperty rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
-        <core:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180.0</core:hasValue>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Sedentary -->
@@ -6131,7 +6047,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Sedentary">
         <rdf:type rdf:resource="http://purl.org/afmo#PhysicalActivityLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Severe -->
@@ -6149,16 +6065,9 @@ Highly active: &gt;=12,500</rdfs:comment>
                 </owl:oneOf>
             </owl:Class>
         </rdf:type>
+        <afmo:isMoreSevereThan rdf:resource="http://purl.org/afmo#Moderate"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#SleepApnoea -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#SleepApnoea">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_0050847"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#SomewhatActive -->
@@ -6166,7 +6075,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#SomewhatActive">
         <rdf:type rdf:resource="http://purl.org/afmo#PhysicalActivityLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Specified -->
@@ -6185,7 +6094,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Symptomatic -->
@@ -6193,7 +6102,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Symptomatic">
         <rdf:type rdf:resource="http://purl.org/afmo#SymptomState"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#SystolicBloodPressure -->
@@ -6201,23 +6110,7 @@ Highly active: &gt;=12,500</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#SystolicBloodPressure">
         <rdf:type rdf:resource="http://purl.org/afmo#SystolicBloodPressure"/>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://purl.org/afmo#Thromboembolism -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Thromboembolism">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0001907"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/afmo#TransientIschemicAttack -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/afmo#TransientIschemicAttack">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HP_0002326"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://purl.org/afmo#Underweight -->
@@ -6240,7 +6133,7 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Obese"/>
         <afmo:isLighterThan rdf:resource="http://purl.org/afmo#Overweight"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Unknown -->
@@ -6260,7 +6153,7 @@ Highly active: &gt;=12,500</rdfs:comment>
             </owl:Class>
         </rdf:type>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://purl.org/afmo#Young -->
@@ -6283,10 +6176,18 @@ Highly active: &gt;=12,500</rdfs:comment>
         <afmo:isYoungerThan rdf:resource="http://purl.org/afmo#Elderly"/>
         <afmo:isYoungerThan rdf:resource="http://purl.org/afmo#LateMiddleAged"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!-- http://purl.org/afmo#TwelveLeadECG -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#TwelveLeadECG">
+        <rdf:type rdf:resource="http://purl.org/afmo#DiagnosticRecommendation"/>
+    </owl:NamedIndividual>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -6294,17 +6195,6 @@ Highly active: &gt;=12,500</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.org/afmo#MajorBleeding">
-        <oboInOwl:hasDbXref>UMLS:C5243991</oboInOwl:hasDbXref>
-        <rdfs:label>MajorBleeding</rdfs:label>
-        <skos:definition>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/afmo#MajorBleeding"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>Any bleeding requiring hospitalization and/or causing a decrease in hemoglobin level of .2 g/L and/or requiring blood transfusion that was not a hemorrhagic stroke</owl:annotatedTarget>
-        <rdfs:isDefinedBy>Pisters, R.; Lane, D. A.; Nieuwlaat, R.; de Vos, C. B.; Crijns, H. J. G. M.; and Lip, G. Y. H. 2010. A Novel User-Friendly Score (HAS-BLED) To Assess 1-Year Risk of Major Bleeding in Patients With Atrial Fibrillation: The Euro Heart Survey. Chest, 138(5): 1093–1100.</rdfs:isDefinedBy>
-    </owl:Axiom>
     <rdf:Description rdf:about="http://purl.org/afmo#SystolicBloodPressure">
         <rdfs:comment>The highest arterial blood pressure of a cardiac cycle occurring immediately after systole of the left ventricle of the heart. Systole: the contraction of the heart by which the blood is forced out of the chambers and into the aorta and pulmonary artery.</rdfs:comment>
         <rdfs:label>SystolicBloodPressure</rdfs:label>
@@ -6316,10 +6206,10 @@ Highly active: &gt;=12,500</rdfs:comment>
         <rdfs:isDefinedBy>“Systole.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/systole. Accessed 18 September 2023.</rdfs:isDefinedBy>
         <rdfs:isDefinedBy>“Systolic blood pressure.” Merriam-Webster.com Medical Dictionary, Merriam-Webster, https://www.merriam-webster.com/medical/systolic%20blood%20pressure. Accessed 18 September 2023.</rdfs:isDefinedBy>
     </owl:Axiom>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -6840,4 +6730,3 @@ Highly active: &gt;=12,500</rdfs:comment>
 
 
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
-
