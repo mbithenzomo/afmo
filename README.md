@@ -4,24 +4,16 @@
 <https://purl.org/afmo>
 
 ## About
-The Atrial Fibrillation Monitoring Ontology (AFMO) is a component of a hybrid AI architecture for personal health monitoring using heterogeneous and multimodal health data. It is designed to formally
-represent health data and expert knowledge for atrial fibrillation (AF) monitoring.
-
-The AFMO has 11 top-level classes which can broadly be grouped into sensors and sensor data, personal information, and medical knowledge. 
-
-![Top level classes of the AFMO](/images/top_level.png)
-*Top level classes of the AFMO.*
-
-An important aspect of the AFMO is its ability to support AF risk prediction. The ontolgy represents an individual's risk factors. It also represents the relationship between each risk factor and the risk of AF, supported by evidence which may be published in a scientific publication.
-
-![Representation of AF risk factors.](/images/risk_factors.png)
-*Representation of AF risk factors in the AFMO.*
-
-![Representation of risk relationships.](/images/risk_relationship.png)
-*Representation of a risk relationship (i.e risk, risk factor, and supporting evidence) in the AFMO.*
+The Atrial Fibrillation Monitoring Ontology (AFMO) is a component of a hybrid AI architecture for personal health monitoring using heterogeneous and multimodal health data. It is designed to formally represent health data and expert knowledge for atrial fibrillation (AF) monitoring. This involves three key functionalities: AF detection, AF risk prediction, and decision support.
 
 ## Documentation
 Coming soon.
+
+## Ontology visualisations
+The AFMO has 12 top-level classes which can broadly be grouped into sensors and sensor data, personal information, and medical knowledge. 
+
+![Top level classes of the AFMO](/images/top_level.png)
+*Top level classes of the AFMO.*
 
 ## Authorship and attributions
 ### Author
