@@ -1,17 +1,27 @@
-# Atrial Fibrilliation Monitoring Ontology (AFM-Ontology)
+# Atrial Fibrilliation Monitoring Ontology (AFMO)
 
 ## IRI
 <https://purl.org/afmo>
 
+## About
+The Atrial Fibrillation Monitoring Ontology (AFMO) is a component of a hybrid AI architecture for personal health monitoring using heterogeneous and multimodal health data. It is designed to formally
+represent health data and expert knowledge for atrial fibrillation (AF) monitoring.
+
+The AFMO has 11 top-level classes which can broadly be grouped into sensors and sensor data, personal information, and medical knowledge. 
+
+![Top level classes of the AFMO](/images/top_level.png)
+*Top level classes of the AFMO.*
+
+An important aspect of the AFMO is its ability to support AF risk prediction. The ontolgy represents an individual's risk factors. It also represents the relationship between each risk factor and the risk of AF, supported by evidence which may be published in a scientific publication.
+
+![Representation of AF risk factors.](/images/risk_factors.png)
+*Representation of AF risk factors in the AFMO.*
+
+![Representation of risk relationships.](/images/risk_relationship.png)
+*Representation of a risk relationship (i.e risk, risk factor, and supporting evidence) in the AFMO.*
+
 ## Documentation
 Coming soon.
-
-## About
-The Atrial Fibrillation Monitoring Ontology (AFM-Ontology) is a component of a semantic architecture for continuous health monitoring using heterogeneous health data. It is designed to formally
-represent three categories of data (sensor data, expert medical knowledge, and personal information) in order to perform situation analysis and decision support for atrial fibrillation monitoring.
-
-![Top level concepts of the AFMO](/images/top_level_concepts.jpg)
-*Top level concepts of the AFMO.*
 
 ## Authorship and attributions
 ### Author
@@ -22,8 +32,35 @@ Affiliations:
 *Adaptive and Cognitive Systems Lab at the Centre for Artificial Intelligence Research ([ACS Lab at CAIR](https://www.cair.org.za/group/1))*;
 *Artificial Intelligence Research Unit([AIRU](https://uct.ac.za/))*
 
-### Acknowledgements
-This work was financially supported by the Hasso Plattner Institute for Digital Engineering through the [HPI Research School at the University of Cape Town](https://sit.uct.ac.za/our-research/hpi-research-school).
+### How to cite
+If you find the AFMO useful, you may cite the following publications:
+
+```
+@inproceedings{nzomo_integrating_2025,
+    title = {Integrating {Knowledge} {Graphs} and {Bayesian} {Networks}: {A} {Hybrid} {Approach} for {Explainable} {Disease} {Risk} {Prediction}},
+    author = {Nzomo, Mbithe and Moodley, Deshendran},
+    booktitle = {Proceedings of the 49th {IEEE} {International} {Conference} on {Computers}, {Software}, and {Applications} ({COMPSAC} 2025)},
+    publisher = {IEEE},
+    year = {2025},
+    note = {To appear},
+}
+```
+
+```
+@incollection{nzomo_semantic_achitecture_2024,
+    title = {A {Semantic} {Architecture} for {Continuous} {Health} {Monitoring}, {Risk} {Prediction}, and {Proactive} {Decision} {Making}},
+    author = {Nzomo, Mbithe and Moodley, Deshendran},
+	booktitle = {{AI} for {Health} {Equity} and {Fairness}},
+	series = {Studies in {Computational} {Intelligence}},
+	volume = {1164},
+	publisher = {Springer Nature Switzerland},
+	editor = {Shaban-Nejad, Arash and Michalowski, Martin and Bianco, Simone},
+	year = {2024},
+	doi = {10.1007/978-3-031-63592-2_20},
+	pages = {265--281},
+}
+```
+
 ## Licence
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
