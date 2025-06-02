@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>Atrial Fibrillation Monitoring Ontology (AFMO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/afmo","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/afmo","name":"Atrial Fibrillation Monitoring Ontology (AFMO)", "headline":"Document describing the ontology http://purl.org/afmo", "dateReleased":"2024-11-27", "dateModified":"2025-06-02", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Mbithe Nzomo"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#nstable").load("sections/ns-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Atrial Fibrillation Monitoring Ontology (AFMO)</h1>
+<h2>Last modification: 2025-06-02</h2>
+
+
+<dl>
+<dt>First release: 2024-11-27</dt>
+<dt>Latest version:</dt>
+<dd><a href="http://purl.org/afmo">http://purl.org/afmo</a></dd>
+<dt>This version:</dt>
+<dd><a href="http://purl.org/afmo/2.0">http://purl.org/afmo/2.0</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://purl.org/afmo/1.0">http://purl.org/afmo/1.0</a></dd>
+<dt>Author:</dt>
+<dd>Mbithe Nzomo</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="afmo.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="afmo.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="afmo.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="afmo.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd>
+	<a href="http://oops.linkeddata.es" target="_blank">
+	<img src="https://oops.linkeddata.es/images/conformance/oops_minor.png"
+	alt="Minor pitfalls were found" height="69.6" width="100" /></a>
+	<br>
+	<p>Pitfall: P22: Using different naming conventions in the ontology.</p>
+	<p>Explanation: Due to the re-use of concepts from other ontologies, some of the classes and properties in AFMO use different naming conventions. For example, some classes use camelCase while others use snake_case.</p>
+</dd>
+ <dt>Cite as:</dt>
+ <dd>M. Nzomo and D. Moodley, "Integrating Knowledge Graphs and Bayesian Networks: A Hybrid Approach for Explainable Disease Risk Prediction," in <em>Proceedings of the 49th IEEE International Conference on Computers, Software, and Applications (COMPSAC 2025)</em>, IEEE, 2025. To appear.</dd>
+<br>
+<dd>M. Nzomo and D. Moodley, "A semantic architecture for continuous health monitoring, risk prediction, and proactive decision making," in <em>AI for Health Equity and Fairness</em>, vol. 1164, <em>Studies in Computational Intelligence</em>, A. Shaban-Nejad, M. Michalowski, and S. Bianco, Eds. Springer Nature Switzerland, 2024, pp. 265-281, doi: <a href="https://doi.org/10.1007/978-3-031-63592-2_20" target="_blank">10.1007/978-3-031-63592-2_20</a>.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+	  <div id="nstable"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+     <div id="changelog"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+This documentation was developed using the <a href="https://github.com/dgarijo/Widoco">WIzard for DOCumenting Ontologies (WIDOCO)</a>.</p>
+</div>
+
+
+</div>
+</body>
+</html>
