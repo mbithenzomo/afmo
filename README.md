@@ -7,10 +7,19 @@
 The Atrial Fibrillation Monitoring Ontology (AFMO) is a component of a hybrid AI architecture for personal health monitoring using heterogeneous and multimodal health data. It is designed to formally represent health data and expert knowledge for atrial fibrillation (AF) monitoring. This involves three key functionalities: AF detection, AF risk prediction, and decision support.
 
 ## Documentation
-The AFMO has 12 top-level classes which can broadly be grouped into sensors and sensor data, personal information (including comorbidities and other risk factors that a person may have), and medical knowledge. A comprehensive ontology documentation, including a WebVOWL visualisation of how the different classes relate to each other, can be found [here](https://mbithenzomo.github.io/afmo/).
+The AFMO includes concepts related to sensors and sensor data, risk factors for AF, and the scientific literature sources that provide evidence to support the risk factors. A comprehensive ontology documentation, including a WebVOWL visualisation of how the different classes relate to each other, can be found [here](https://mbithenzomo.github.io/afmo/).
 
-![Top level classes of the AFMO](/images/top_level.png)
-*Top level classes of the AFMO.*
+![Sensors and sensor data concepts in the AFMO](/images/sensors.svg)
+*The Device, Property, Measurement, and Unit of measure classes, relations, and properties. Concepts from reused ontologies are indicated with the prefixes FOAF (Friend of a Friend), SAREF (Smart Applications REFerence), and SAREF4wear (SAREF for Wearables) ontologies.*
+
+![Risk factor hierarchy](/images/risk_factors.svg)
+*The Risk factor class hierarchy, relations, and properties. Concepts from reused ontologies are indicated with the prefixes DOID (Human Disease Ontology) and FOAF (Friend of a Friend).*
+
+![Risk relationships](/images/risk.svg)
+*The Risk, Risk relationship, and Risk status classes, relations, and properties. Concepts from reused ontologies are indicated with the prefix ECO (Evidence and Conclusion Ontology).*
+
+![Evidence](/images/evidence.svg)
+*The Evidence, Intervention, and Publication classes, the relations between them, and their properties. Concepts from reused ontologies are indicated with the prefixes ECO (Evidence and Conclusion Ontology) and FABIO (FRBR-aligned Bibliographic Ontology).*
 
 ## Authorship and attributions
 ### Author
