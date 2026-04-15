@@ -7,7 +7,7 @@
 @base <http://purl.org/afmo#> .
 
 <http://purl.org/afmo> rdf:type owl:Ontology ;
-                        owl:versionIRI <http://purl.org/afmo/2.0> ;
+                        owl:versionIRI <http://purl.org/afmo/2.1> ;
                         <http://purl.org/dc/elements/1.1/creator> "Mbithe Nzomo" ;
                         <http://purl.org/dc/elements/1.1/title> "Atrial Fibrillation Monitoring Ontology (AFMO)" ;
                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
@@ -17,16 +17,15 @@
 - Evidence and Conclusion Ontology
 - FRBR-aligned Bibliographic Ontology (FaBiO)
 - Friend of a Friend (FOAF) Ontology
-- Human Phenotype Ontology
 - SAREF Ontology
 - SAREF4Wear Ontology
-- SAREF4health Ontology
+- SAREF4Health Ontology
 
 Health domain concepts have been manually cross-referenced to concepts from the Unified Medical Language System (UMLS) metathesaurus, which maps to several medical vocabularies and databases, including:
 
 - SNOMED CT (US)
 - Medical Subject Headings (MeSH) Thesaurus
-- Nactional cancer Institute (NCI) Thesaurus
+- National cancer Institute (NCI) Thesaurus
 - MedlinePlus""" .
 
 #################################################################
@@ -246,6 +245,14 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "has factor" .
 
 
+###  http://purl.org/afmo#hasHeightGroup
+:hasHeightGroup rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isHeightGroupOf ;
+                rdfs:domain :MonitoredPerson ;
+                rdfs:range :HeightGroup ;
+                rdfs:label "has height group" .
+
+
 ###  http://purl.org/afmo#hasMeasurement
 :hasMeasurement rdf:type owl:ObjectProperty ;
                 owl:inverseOf :isMeasurementOf ;
@@ -268,7 +275,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasPWaveDurationCategory rdf:type owl:ObjectProperty ;
                           owl:inverseOf :isPWaveDurationCategoryOf ;
                           rdfs:domain :MonitoredPerson ;
-                          rdfs:range :PWaveDurationCategory ;
+                          rdfs:range :ProlongedPWave ;
                           rdfs:comment "The relationship between a person and their P-wave duration category." ;
                           rdfs:label "has P-wave duration category" .
 
@@ -312,7 +319,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/afmo#hasRiskFactor
 :hasRiskFactor rdf:type owl:ObjectProperty ;
-               owl:inverseOf :isRiskFactorIn ;
+               owl:inverseOf :isRiskFactorInRelationship ;
                rdfs:domain :RiskRelationship ;
                rdfs:range :RiskFactor ;
                rdfs:comment "The relationship between a risk relationship and a risk factor." ;
@@ -436,6 +443,16 @@ xsd:date rdf:type rdfs:Datatype .
                                 rdfs:label "is condition in comorbidity status" .
 
 
+###  http://purl.org/afmo#isConditionInRisk
+:isConditionInRisk rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf :isRiskOfCondition ;
+                   rdfs:domain :MedicalCondition ;
+                   rdfs:range :Risk ;
+                   rdfs:comment "The relationship between a medical condition and the risk of that condition (present or absent)." ;
+                   rdfs:label "is condition in risk" .
+
+
 ###  http://purl.org/afmo#isConditionInRiskStatus
 :isConditionInRiskStatus rdf:type owl:ObjectProperty ;
                          owl:inverseOf :isRiskStatusOfCondition ;
@@ -475,16 +492,24 @@ xsd:date rdf:type rdfs:Datatype .
 :isEvidenceFor rdf:type owl:ObjectProperty ;
                owl:inverseOf :isEvidencedBy ;
                rdfs:domain <http://purl.obolibrary.org/obo/ECO_0000000> ;
-               rdfs:range :RiskRelationship ;
-               rdfs:comment "The relationship between supporting evidence and a risk relationship." ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :Intervention
+                                          :RiskRelationship
+                                        )
+                          ] ;
+               rdfs:comment "The relationship between supporting evidence and a risk relationship or intervention." ;
                rdfs:label "is evidence for" .
 
 
 ###  http://purl.org/afmo#isEvidencedBy
 :isEvidencedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :RiskRelationship ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Intervention
+                                           :RiskRelationship
+                                         )
+                           ] ;
                rdfs:range <http://purl.obolibrary.org/obo/ECO_0000000> ;
-               rdfs:comment "The relationship between a relationship and supporting evidence." ;
+               rdfs:comment "The relationship between a risk relationship or intervention, and supporting evidence." ;
                rdfs:label "is evidenced by" .
 
 
@@ -506,6 +531,13 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "is higher BMI than" .
 
 
+###  http://purl.org/afmo#isHeightGroupOf
+:isHeightGroupOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :HeightGroup ;
+                 rdfs:range :MonitoredPerson ;
+                 rdfs:label "is height group of" .
+
+
 ###  http://purl.org/afmo#isLighterThan
 :isLighterThan rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -522,16 +554,6 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:range :MonitoredPerson ;
                  rdfs:comment "The relationship between a measurament and the person whose property is being measured." ;
                  rdfs:label "is measurement of" .
-
-
-###  http://purl.org/afmo#isMedicalConditionInRisk
-:isMedicalConditionInRisk rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf owl:topObjectProperty ;
-                          owl:inverseOf :isRiskOfMedicalCondition ;
-                          rdfs:domain :MedicalCondition ;
-                          rdfs:range :Risk ;
-                          rdfs:comment "The relationship between a medical condition and the risk of that condition (present or absent)." ;
-                          rdfs:label "is medical condition in risk" .
 
 
 ###  http://purl.org/afmo#isOlderThan
@@ -554,7 +576,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/afmo#isPWaveDurationCategoryOf
 :isPWaveDurationCategoryOf rdf:type owl:ObjectProperty ;
-                           rdfs:domain :PWaveDurationCategory ;
+                           rdfs:domain :ProlongedPWave ;
                            rdfs:range :MonitoredPerson ;
                            rdfs:comment "The relationship between a P-wave duration category and a monitored person." ;
                            rdfs:label "is P-wave duration category of" .
@@ -610,12 +632,12 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:label "is related to measurement" .
 
 
-###  http://purl.org/afmo#isRiskFactorIn
-:isRiskFactorIn rdf:type owl:ObjectProperty ;
-                rdfs:domain :RiskFactor ;
-                rdfs:range :RiskRelationship ;
-                rdfs:comment "The relationship between a risk factor and a risk relationship." ;
-                rdfs:label "is risk factor in" .
+###  http://purl.org/afmo#isRiskFactorInRelationship
+:isRiskFactorInRelationship rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RiskFactor ;
+                            rdfs:range :RiskRelationship ;
+                            rdfs:comment "The relationship between a risk factor and a risk relationship." ;
+                            rdfs:label "is risk factor in relationship" .
 
 
 ###  http://purl.org/afmo#isRiskInRelationship
@@ -626,13 +648,13 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:label "is risk in relationship" .
 
 
-###  http://purl.org/afmo#isRiskOfMedicalCondition
-:isRiskOfMedicalCondition rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf owl:topObjectProperty ;
-                          rdfs:domain :Risk ;
-                          rdfs:range :MedicalCondition ;
-                          rdfs:comment "The relationship between a risk (i.e. present or absent) and a medical condition." ;
-                          rdfs:label "is risk of medical condition" .
+###  http://purl.org/afmo#isRiskOfCondition
+:isRiskOfCondition rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :Risk ;
+                   rdfs:range :MedicalCondition ;
+                   rdfs:comment "The relationship between a risk (i.e. present or absent) and a medical condition." ;
+                   rdfs:label "is risk of condition" .
 
 
 ###  http://purl.org/afmo#isRiskStatusOf
@@ -700,13 +722,14 @@ xsd:date rdf:type rdfs:Datatype .
 :wearsDevice rdf:type owl:ObjectProperty ;
              owl:inverseOf <https://saref.etsi.org/saref4wear/isLocatedOn> ;
              rdfs:domain :MonitoredPerson ;
-             rdfs:range <https://saref.etsi.org/saref4wear/OnBodyWearable> ;
-             rdfs:comment "The relationship between a person and the on-body wearable device that is located on them." ;
+             rdfs:range <https://saref.etsi.org/saref4wear/Wearable> ;
+             rdfs:comment "The relationship between a person and the wearable device that is located on them." ;
              rdfs:label "wears device" .
 
 
 ###  https://saref.etsi.org/core/consistsOf
-<https://saref.etsi.org/core/consistsOf> rdf:type owl:ObjectProperty ;
+<https://saref.etsi.org/core/consistsOf> rdf:type owl:ObjectProperty ,
+                                                  owl:TransitiveProperty ;
                                          rdfs:domain <https://saref.etsi.org/saref4wear/Wearable> ;
                                          rdfs:range <https://w3id.org/saref#Sensor> ;
                                          rdfs:comment "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)"@en ;
@@ -769,9 +792,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://saref.etsi.org/saref4wear/isLocatedOn
 <https://saref.etsi.org/saref4wear/isLocatedOn> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain <https://saref.etsi.org/saref4wear/OnBodyWearable> ;
+                                                rdfs:domain <https://saref.etsi.org/saref4wear/Wearable> ;
                                                 rdfs:range :MonitoredPerson ;
-                                                rdfs:comment "The relationship between an on-body wearable device and the person it is located on." ;
+                                                rdfs:comment "The relationship between a wearable device and the person it is located on." ;
                                                 rdfs:label "is located on" .
 
 
@@ -1488,7 +1511,7 @@ Recommended best practice is to identify the resource by means of a string confo
 :AtrialFibrillationRisk rdf:type owl:Class ;
                         rdfs:subClassOf :Risk ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty :isRiskOfMedicalCondition ;
+                                          owl:onProperty :isRiskOfCondition ;
                                           owl:someValuesFrom <http://purl.obolibrary.org/obo/DOID_0060224>
                                         ] ;
                         rdfs:comment "The risk of AF as a general concept rather than a specific person's AF risk status." ;
@@ -1605,7 +1628,7 @@ Recommended best practice is to identify the resource by means of a string confo
                rdfs:subClassOf :AnthropometricProperty ;
                <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UMLS:C1305855" ;
                rdfs:comment "An indicator of body density as determined by the relationship of body weight to body height. BMI = weight (kg)/height squared (m2)." ;
-               rdfs:label "Body mass index (BMI)" .
+               rdfs:label "BMI" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :BodyMassIndex ;
@@ -1947,7 +1970,7 @@ Recommended best practice is to identify the resource by means of a string confo
                                     owl:someValuesFrom :ComorbidityFactor
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isMedicalConditionInRisk ;
+                                    owl:onProperty :isConditionInRisk ;
                                     owl:someValuesFrom :Risk
                                   ] ,
                                   [ rdf:type owl:Restriction ;
@@ -1995,6 +2018,10 @@ Recommended best practice is to identify the resource by means of a string confo
                                    owl:someValuesFrom :ECGFactor
                                  ] ,
                                  [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasHeightGroup ;
+                                   owl:someValuesFrom :HeightGroup
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasMeasurement ;
                                    owl:someValuesFrom <https://saref.etsi.org/core/Measurement>
                                  ] ,
@@ -2032,7 +2059,7 @@ Recommended best practice is to identify the resource by means of a string confo
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasPWaveDurationCategory ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                   owl:onClass :PWaveDurationCategory
+                                   owl:onClass :ProlongedPWave
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasProlongedPRIntervalStatus ;
@@ -2079,25 +2106,20 @@ Recommended best practice is to identify the resource by means of a string confo
                                                      )
                                          ] ;
                      rdfs:subClassOf :ECGFactor ;
-                     rdfs:comment "PR interval standard deviation of greater than 12 milliseconds across an ECG signal." ;
+                     rdfs:comment "Determined based on a specific threshold from the PR interval standard deviation." ;
                      rdfs:label "PR interval variation" .
 
 
-###  http://purl.org/afmo#PWaveDurationCategory
-:PWaveDurationCategory rdf:type owl:Class ;
-                       owl:equivalentClass [ rdf:type owl:Class ;
-                                             owl:oneOf ( :PWDIntermediateI
-                                                         :PWDIntermediateII
-                                                         :PWDLong
-                                                         :PWDNormal
-                                                         :PWDShort
-                                                         :PWDVeryLong
-                                                         :PWDVeryShort
-                                                       )
-                                           ] ;
-                       rdfs:subClassOf :ECGFactor ;
-                       rdfs:comment "P-wave duration can be categorised as: very short (<= 89 ms), short (90-99), normal (100-105 ms), intermediate-1 (106-111 ms), intermediate-II (112-119), long (120-129 ms), and very long (>= 130 ms)." ;
-                       rdfs:label "P-wave duration category" .
+###  http://purl.org/afmo#PWaveVariation
+:PWaveVariation rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( :PWaveVariationAbsent
+                                                  :PWaveVariationPresent
+                                                )
+                                    ] ;
+                rdfs:subClassOf :ECGFactor ;
+                rdfs:comment "Determined based on a specific threshold from the P-wave duration standard deviation." ;
+                rdfs:label "P-wave variation" .
 
 
 ###  http://purl.org/afmo#ProlongedPRInterval
@@ -2108,8 +2130,32 @@ Recommended best practice is to identify the resource by means of a string confo
                                                      )
                                          ] ;
                      rdfs:subClassOf :ECGFactor ;
-                     rdfs:comment "A prolonged PR interval occurs when the PR interval on an ECG is greater than 200 milliseconds." ;
+                     rdfs:comment "Determined based on a specific threshold from the median PR interval." ;
                      rdfs:label "Prolonged PR interval" .
+
+
+###  http://purl.org/afmo#ProlongedPWave
+:ProlongedPWave rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( :ProlongedPWaveAbsent
+                                                  :ProlongedPWavePresent
+                                                )
+                                    ] ;
+                rdfs:subClassOf :ECGFactor ;
+                rdfs:comment "Determined based on a specific threshold from the median P-wave duration." ;
+                rdfs:label "Prolonged P-wave" .
+
+
+###  http://purl.org/afmo#ProlongedRRInterval
+:ProlongedRRInterval rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:oneOf ( :ProlongedRRIntervalAbsent
+                                                       :ProlongedRRIntervalPresent
+                                                     )
+                                         ] ;
+                     rdfs:subClassOf :ECGFactor ;
+                     rdfs:comment "Determined based on a specific threshold from the median RR interval." ;
+                     rdfs:label "Prolonged RR interval" .
 
 
 ###  http://purl.org/afmo#Publication
@@ -2159,6 +2205,18 @@ Recommended best practice is to identify the resource by means of a string confo
  ] .
 
 
+###  http://purl.org/afmo#RRIntervalVariation
+:RRIntervalVariation rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:oneOf ( :RRIntervalVariationAbsent
+                                                       :RRIntervalVariationPresent
+                                                     )
+                                         ] ;
+                     rdfs:subClassOf :ECGFactor ;
+                     rdfs:comment "Determined based on a specific threshold from the RR interval standard deviation." ;
+                     rdfs:label "RR interval variation" .
+
+
 ###  http://purl.org/afmo#Race
 :Race rdf:type owl:Class ;
       owl:equivalentClass [ rdf:type owl:Class ;
@@ -2189,7 +2247,7 @@ Recommended best practice is to identify the resource by means of a string confo
                         owl:someValuesFrom :RiskRelationship
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :isRiskOfMedicalCondition ;
+                        owl:onProperty :isRiskOfCondition ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass :MedicalCondition
                       ] ;
@@ -2219,7 +2277,7 @@ Recommended best practice is to identify the resource by means of a string confo
                               owl:someValuesFrom :MonitoredPerson
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :isRiskFactorIn ;
+                              owl:onProperty :isRiskFactorInRelationship ;
                               owl:someValuesFrom :RiskRelationship
                             ] ,
                             [ rdf:type owl:Restriction ;
@@ -2524,6 +2582,10 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 ###  http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :isAuthorOf ;
+                                                     owl:someValuesFrom :Publication
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
                                                      owl:onProperty <http://xmlns.com/foaf/0.1/firstName> ;
                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                      owl:onDataRange xsd:string
@@ -2632,17 +2694,6 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
                                                       rdfs:label "Biometric property"@en .
 
 
-###  https://saref.etsi.org/saref4wear/OnBodyWearable
-<https://saref.etsi.org/saref4wear/OnBodyWearable> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://saref.etsi.org/saref4wear/Wearable> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://saref.etsi.org/saref4wear/isLocatedOn> ;
-                                                                     owl:allValuesFrom :MonitoredPerson
-                                                                   ] ;
-                                                   rdfs:comment "An on-body wearable is a wearable having a direct contact with a physical body."@en ;
-                                                   rdfs:label "On-body wearable"@en .
-
-
 ###  https://saref.etsi.org/saref4wear/Wearable
 <https://saref.etsi.org/saref4wear/Wearable> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
@@ -2656,13 +2707,13 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
 ###  https://w3id.org/def/saref4health#ECGDevice
 <https://w3id.org/def/saref4health#ECGDevice> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://saref.etsi.org/saref4wear/OnBodyWearable> ,
+                                              rdfs:subClassOf <https://saref.etsi.org/saref4wear/Wearable> ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <https://saref.etsi.org/core/consistsOf> ;
                                                                 owl:someValuesFrom <https://w3id.org/def/saref4health#ECGLead>
                                                               ] ;
                                               rdfs:comment "Device used to record ECG sessions from a living person. Also called electrocardiograph and usually referred as an ECG unit, it plays the role of a recorder which accomplishes the task of recording ECG sessions. The ECG device registers the heart electrical activity with support of electrodes attached onto different places of the body Usually an ECG device can include other sensors, e.g. Accelerometer" ;
-                                              rdfs:label "ECG Device" .
+                                              rdfs:label "ECG device" .
 
 
 ###  https://w3id.org/def/saref4health#ECGLead
@@ -3003,51 +3054,16 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
                             rdfs:label "PR interval variation present" .
 
 
-###  http://purl.org/afmo#PWDIntermediateI
-:PWDIntermediateI rdf:type owl:NamedIndividual ,
-                           :PWaveDurationCategory ;
-                  rdfs:comment "P-wave duration category." ;
-                  rdfs:label "Intermediate-I" .
+###  http://purl.org/afmo#PWaveVariationAbsent
+:PWaveVariationAbsent rdf:type owl:NamedIndividual ,
+                               :PWaveVariation ;
+                      rdfs:label "P-wave variation absent" .
 
 
-###  http://purl.org/afmo#PWDIntermediateII
-:PWDIntermediateII rdf:type owl:NamedIndividual ,
-                            :PWaveDurationCategory ;
-                   rdfs:comment "P-wave duration category." ;
-                   rdfs:label "Intermediate-II" .
-
-
-###  http://purl.org/afmo#PWDLong
-:PWDLong rdf:type owl:NamedIndividual ,
-                  :PWaveDurationCategory ;
-         rdfs:comment "P-wave duration category." ;
-         rdfs:label "Long" .
-
-
-###  http://purl.org/afmo#PWDNormal
-:PWDNormal rdf:type owl:NamedIndividual ,
-                    :PWaveDurationCategory ;
-           rdfs:comment "P-wave duration category." ;
-           rdfs:label "Normal P-wave duration" .
-
-
-###  http://purl.org/afmo#PWDShort
-:PWDShort rdf:type owl:NamedIndividual ,
-                   :PWaveDurationCategory .
-
-
-###  http://purl.org/afmo#PWDVeryLong
-:PWDVeryLong rdf:type owl:NamedIndividual ,
-                      :PWaveDurationCategory ;
-             rdfs:comment "P-wave duration category." ;
-             rdfs:label "Very long" .
-
-
-###  http://purl.org/afmo#PWDVeryShort
-:PWDVeryShort rdf:type owl:NamedIndividual ,
-                       :PWaveDurationCategory ;
-              rdfs:comment "P-wave duration category." ;
-              rdfs:label "Very short" .
+###  http://purl.org/afmo#PWaveVariationPresent
+:PWaveVariationPresent rdf:type owl:NamedIndividual ,
+                                :PWaveVariation ;
+                       rdfs:label "P-wave variation present" .
 
 
 ###  http://purl.org/afmo#ProlongedPRIntervalAbsent
@@ -3060,6 +3076,42 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 :ProlongedPRIntervalPresent rdf:type owl:NamedIndividual ,
                                      :ProlongedPRInterval ;
                             rdfs:label "Prolonged PR interval present" .
+
+
+###  http://purl.org/afmo#ProlongedPWaveAbsent
+:ProlongedPWaveAbsent rdf:type owl:NamedIndividual ,
+                               :ProlongedPWave ;
+                      rdfs:label "Prolonged P-wave absent" .
+
+
+###  http://purl.org/afmo#ProlongedPWavePresent
+:ProlongedPWavePresent rdf:type owl:NamedIndividual ,
+                                :ProlongedPWave ;
+                       rdfs:label "Prolonged P-wave present" .
+
+
+###  http://purl.org/afmo#ProlongedRRIntervalAbsent
+:ProlongedRRIntervalAbsent rdf:type owl:NamedIndividual ,
+                                    :ProlongedRRInterval ;
+                           rdfs:label "Prolonged RR interval absent" .
+
+
+###  http://purl.org/afmo#ProlongedRRIntervalPresent
+:ProlongedRRIntervalPresent rdf:type owl:NamedIndividual ,
+                                     :ProlongedRRInterval ;
+                            rdfs:label "Prolonged RR interval present" .
+
+
+###  http://purl.org/afmo#RRIntervalVariationAbsent
+:RRIntervalVariationAbsent rdf:type owl:NamedIndividual ,
+                                    :RRIntervalVariation ;
+                           rdfs:label "RR interval variation absent" .
+
+
+###  http://purl.org/afmo#RRIntervalVariationPresent
+:RRIntervalVariationPresent rdf:type owl:NamedIndividual ,
+                                     :RRIntervalVariation ;
+                            rdfs:label "RR interval variation present" .
 
 
 ###  http://purl.org/afmo#RiskAFAgeGroup
