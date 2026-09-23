@@ -341,14 +341,14 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
-    <!-- http://purl.org/afmo#approvedIntervention -->
+    <!-- http://purl.org/afmo#approvalStatusDeterminedByClinician -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/afmo#approvedIntervention">
-        <owl:inverseOf rdf:resource="http://purl.org/afmo#wasApprovedByClinician"/>
-        <rdfs:domain rdf:resource="http://purl.org/afmo#Clinician"/>
-        <rdfs:range rdf:resource="http://purl.org/afmo#HealthIntervention"/>
-        <rdfs:comment>The relationship between a clinician and a health intervention that they approved for a monitored person.</rdfs:comment>
-        <rdfs:label>approved intervention</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#approvalStatusDeterminedByClinician">
+        <owl:inverseOf rdf:resource="http://purl.org/afmo#determinedApprovalStatusForIntervention"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#Clinician"/>
+        <rdfs:comment>The relationship between a health intervention and the clinician that determined its approval status.</rdfs:comment>
+        <rdfs:label>approval status determined by clinician</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -361,6 +361,17 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:range rdf:resource="http://purl.org/afmo#HealthIntervention"/>
         <rdfs:comment>The relationship between a model (specifically a Bayesian decision network) and a health intervention whose expected utility it calculated.</rdfs:comment>
         <rdfs:label>recommended intervention</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/afmo#determinedApprovalStatusForIntervention -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#determinedApprovalStatusForIntervention">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#Clinician"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:comment>The relationship between a clinician and a health intervention that they approved, pre-approved, or rejected.</rdfs:comment>
+        <rdfs:label>determined approval status for intervention</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -412,6 +423,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
             <rdf:Description rdf:about="http://purl.org/afmo#hasAlcoholMisuseStatus"/>
         </owl:members>
     </rdf:Description>
+    
+
+
+    <!-- http://purl.org/afmo#hasApprovalStatus -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#hasApprovalStatus">
+        <owl:inverseOf rdf:resource="http://purl.org/afmo#isApprovalStatusOfIntervention"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:comment>The relationship between a health intervention and its approval status (approved, pre-approved, rejected, or pending).</rdfs:comment>
+        <rdfs:label>has approval status</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -754,6 +777,17 @@ Health domain concepts have been manually cross-referenced to concepts from the 
         <rdfs:range rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
         <rdfs:comment>The relationship between an alcohol misuse status (present or absent) and a person who belongs to it.</rdfs:comment>
         <rdfs:label>is alcohol misuse status of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/afmo#isApprovalStatusOfIntervention -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/afmo#isApprovalStatusOfIntervention">
+        <rdfs:domain rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:range rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:comment>The relationship between an approval status (approved, pre-approved, rejected, or pending) and a health intervention.</rdfs:comment>
+        <rdfs:label>is approval status of intervention</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1442,17 +1476,6 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
-    <!-- http://purl.org/afmo#wasApprovedByClinician -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/afmo#wasApprovedByClinician">
-        <rdfs:domain rdf:resource="http://purl.org/afmo#HealthIntervention"/>
-        <rdfs:range rdf:resource="http://purl.org/afmo#Clinician"/>
-        <rdfs:comment>The relationship between a health intervention and a clinician who approved it for a monitored person.</rdfs:comment>
-        <rdfs:label>was approved by clinician</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/afmo#wasAssessedByModel -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/afmo#wasAssessedByModel">
@@ -2006,6 +2029,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
+    <!-- http://purl.org/afmo#hasApprovalStatusTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasApprovalStatusTimestamp">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/hasTimestamp"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>The timestamp at which a health intervention&apos;s approval status was determined by a clinician. In the case of the default approval status (i.e. &quot;pending&quot;), the value is the same as the recommendation timestamp.</rdfs:comment>
+        <rdfs:label>has approval status timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/afmo#hasBMI -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasBMI">
@@ -2288,6 +2323,18 @@ Health domain concepts have been manually cross-referenced to concepts from the 
     
 
 
+    <!-- http://purl.org/afmo#hasRecommendationTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasRecommendationTimestamp">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/hasTimestamp"/>
+        <rdfs:domain rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>The timestamp at which a health intervention was recommended by a model.</rdfs:comment>
+        <rdfs:label>has recommendation timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/afmo#hasRiskWeight -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/afmo#hasRiskWeight">
@@ -2369,6 +2416,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2529,6 +2577,7 @@ Recommended best practice is to identify the resource by means of a string confo
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/afmo#DiscreteObservation"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#HealthEventPrediction"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#HealthIntervention"/>
                     <rdf:Description rdf:about="http://purl.org/afmo#HealthRiskAssessment"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2643,6 +2692,7 @@ Recommended best practice is to identify the resource by means of a string confo
                 <owl:someValuesFrom rdf:resource="http://purl.org/afmo#Publication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
         <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEvent"/>
         <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEventPrediction"/>
         <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEventPredictionStatus"/>
@@ -2715,6 +2765,8 @@ Recommended best practice is to identify the resource by means of a string confo
                 <owl:someValuesFrom rdf:resource="http://purl.org/afmo#HealthIntervention"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEvent"/>
     </owl:Class>
     
 
@@ -3037,6 +3089,45 @@ Recommended best practice is to identify the resource by means of a string confo
         <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4wear/BiometricProperty"/>
         <rdfs:comment>Class to group those properties related to the body measurements of monitored individuals.</rdfs:comment>
         <rdfs:label>Anthropometric property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/afmo#ApprovalStatus -->
+
+    <owl:Class rdf:about="http://purl.org/afmo#ApprovalStatus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/afmo#Approved"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Pending"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Pre-approved"/>
+                    <rdf:Description rdf:about="http://purl.org/afmo#Rejected"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEvent"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEventPrediction"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthEventPredictionStatus"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthRiskAssessment"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthRiskFactor"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthRiskRelationship"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthRiskStatus"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#MedicalCondition"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#Model"/>
+        <owl:disjointWith rdf:resource="http://purl.org/afmo#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4wear/WearableDevice"/>
+        <rdfs:comment>The approval status of a health intervention as determined by a clinician.</rdfs:comment>
+        <rdfs:label>Approval status</rdfs:label>
     </owl:Class>
     
 
@@ -3408,6 +3499,18 @@ Recommended best practice is to identify the resource by means of a string confo
 
     <owl:Class rdf:about="http://purl.org/afmo#Clinician">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#determinedApprovalStatusForIntervention"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#isClinicianOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:comment>A clinician of a monitored person.</rdfs:comment>
@@ -3820,15 +3923,16 @@ Recommended best practice is to identify the resource by means of a string confo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/afmo#wasApprovedByClinician"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/afmo#Clinician"/>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#isInResponseTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/afmo#HealthEventPrediction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/afmo#isInResponseTo"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/afmo#HealthEventPrediction"/>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#approvalStatusDeterminedByClinician"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/afmo#Clinician"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3840,9 +3944,30 @@ Recommended best practice is to identify the resource by means of a string confo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#hasApprovalStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#hasApprovalStatusTimestamp"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/afmo#hasExpectedUtility"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/afmo#hasRecommendationTimestamp"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/afmo#HealthRiskAssessment"/>
@@ -4897,8 +5022,7 @@ Dagfinn et al. (2018) noted that there is reduced risk of AF among former smoker
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/ConferenceProceedings"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/ConferenceProceedings"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A paper, typically the realization of a research paper reporting original research findings, usually published within a conference proceedings volume.</rdfs:comment>
@@ -4975,15 +5099,13 @@ Dagfinn et al. (2018) noted that there is reduced risk of AF among former smoker
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/JournalIssue"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/JournalIssue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/JournalVolume"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/JournalVolume"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5012,8 +5134,7 @@ Dagfinn et al. (2018) noted that there is reduced risk of AF among former smoker
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/JournalVolume"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/JournalVolume"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5056,8 +5177,7 @@ Dagfinn et al. (2018) noted that there is reduced risk of AF among former smoker
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/Journal"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/Journal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5088,8 +5208,7 @@ Dagfinn et al. (2018) noted that there is reduced risk of AF among former smoker
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/AcademicProceedings"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/AcademicProceedings"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5156,8 +5275,7 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/spar/fabio/WorkshopProceedings"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/WorkshopProceedings"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A paper, typically the realization of a research paper reporting original research findings, usually presented at a workshop and published within a workshop proceedings volume.</rdfs:comment>
@@ -5633,31 +5751,41 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000009 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000009"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000009">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000010 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000010"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000010">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000056 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000056"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000056">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000058 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000077 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000077"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000077">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
@@ -5672,7 +5800,9 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000092 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000092"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000092">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
+    </owl:NamedIndividual>
     
 
 
@@ -5687,9 +5817,7 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000988 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000988">
-        <terms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MAXO_0000988"/>
     
 
 
@@ -5936,6 +6064,15 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
     
 
 
+    <!-- http://purl.org/afmo#Approved -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Approved">
+        <rdf:type rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:label>Approved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#Arab -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Arab">
@@ -5956,7 +6093,6 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#Atieno">
         <rdf:type rdf:resource="http://purl.org/afmo#MonitoredPerson"/>
-        <afmo:approvedIntervention rdf:resource="http://purl.org/afmo#HealthIntervention2"/>
         <afmo:hasComorbidityStatus rdf:resource="http://purl.org/afmo#HypertensionPresent"/>
         <afmo:hasHeightGroup rdf:resource="http://purl.org/afmo#Group5"/>
         <afmo:hasRaceOrEthnicity rdf:resource="http://purl.org/afmo#BlackAfrican"/>
@@ -6272,7 +6408,6 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#DrChebet">
         <rdf:type rdf:resource="http://purl.org/afmo#Clinician"/>
         <owl:differentFrom rdf:resource="http://purl.org/afmo#DrJuma"/>
-        <afmo:approvedIntervention rdf:resource="http://purl.org/afmo#HealthIntervention2"/>
         <afmo:isClinicianOf rdf:resource="http://purl.org/afmo#Atieno"/>
         <rdfs:label>Dr Chebet</rdfs:label>
     </owl:NamedIndividual>
@@ -6487,11 +6622,14 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#HealthIntervention1">
         <rdf:type rdf:resource="http://purl.org/afmo#HealthIntervention"/>
         <afmo:expectedUtilityCalculatedByModel rdf:resource="http://purl.org/afmo#BayesianDecisionNetwork1"/>
+        <afmo:hasApprovalStatus rdf:resource="http://purl.org/afmo#Pending"/>
         <afmo:hasMedicalAction rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000653"/>
         <afmo:isEvidencedBy rdf:resource="http://purl.org/afmo#AFGuidelinesESC2024"/>
+        <afmo:isInResponseTo rdf:resource="http://purl.org/afmo#AFRiskAssessment1"/>
         <afmo:isRecommendedFor rdf:resource="http://purl.org/afmo#Atieno"/>
-        <afmo:wasApprovedByClinician rdf:resource="http://purl.org/afmo#DrChebet"/>
+        <afmo:hasApprovalStatusTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-09-22T14:30:00+03:00</afmo:hasApprovalStatusTimestamp>
         <afmo:hasExpectedUtility rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</afmo:hasExpectedUtility>
+        <afmo:hasRecommendationTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-09-21T14:30:00+03:00</afmo:hasRecommendationTimestamp>
         <rdfs:label>Health intervention 1</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6501,13 +6639,16 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#HealthIntervention2">
         <rdf:type rdf:resource="http://purl.org/afmo#HealthIntervention"/>
+        <afmo:approvalStatusDeterminedByClinician rdf:resource="http://purl.org/afmo#DrChebet"/>
         <afmo:expectedUtilityCalculatedByModel rdf:resource="http://purl.org/afmo#BayesianDecisionNetwork1"/>
+        <afmo:hasApprovalStatus rdf:resource="http://purl.org/afmo#Approved"/>
         <afmo:hasMedicalAction rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000078"/>
         <afmo:isEvidencedBy rdf:resource="http://purl.org/afmo#ReviewOnEfficacyOfAlcoholCounseling"/>
         <afmo:isInResponseTo rdf:resource="http://purl.org/afmo#AFRiskAssessment1"/>
         <afmo:isRecommendedFor rdf:resource="http://purl.org/afmo#Atieno"/>
-        <afmo:wasApprovedByClinician rdf:resource="http://purl.org/afmo#DrChebet"/>
-        <afmo:hasExpectedUtility rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</afmo:hasExpectedUtility>
+        <afmo:hasApprovalStatusTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-09-21T19:30:00+03:00</afmo:hasApprovalStatusTimestamp>
+        <afmo:hasExpectedUtility rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</afmo:hasExpectedUtility>
+        <afmo:hasRecommendationTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-09-21T14:30:00+03:00</afmo:hasRecommendationTimestamp>
         <rdfs:label>Health intervention 2</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6768,6 +6909,24 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
     
 
 
+    <!-- http://purl.org/afmo#Pending -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Pending">
+        <rdf:type rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:label>Pending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/afmo#Pre-approved -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Pre-approved">
+        <rdf:type rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:label>Pre-approved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#ProlongedPRIntervalAbsent -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#ProlongedPRIntervalAbsent">
@@ -6858,6 +7017,15 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
     
 
 
+    <!-- http://purl.org/afmo#Rejected -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/afmo#Rejected">
+        <rdf:type rdf:resource="http://purl.org/afmo#ApprovalStatus"/>
+        <rdfs:label>Rejected</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/afmo#ReviewOnEfficacyOfAlcoholCounseling -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/afmo#ReviewOnEfficacyOfAlcoholCounseling">
@@ -6879,7 +7047,7 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
         <core1:partOf rdf:resource="http://purl.org/afmo#Volume157"/>
         <basic:doi>10.7326/0003-4819-157-9-201211060-00544</basic:doi>
         <basic:pageRange>645 - 654</basic:pageRange>
-        <afmo:hasDateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">06-11-2012</afmo:hasDateOfPublication>
+        <afmo:hasDateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-06</afmo:hasDateOfPublication>
         <terms:title>Behavioral Counseling After Screening for Alcohol Misuse in Primary Care: A Systematic Review and Meta-analysis for the U.S. Preventive Services Task Force</terms:title>
         <rdfs:label>Review on efficacy of alcohol counselling publiction</rdfs:label>
     </owl:NamedIndividual>
@@ -7073,12 +7241,6 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
         <afmo:isYoungerThan rdf:resource="http://purl.org/afmo#Above74"/>
         <rdfs:label>65 - 74</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://orcid.org/0000-0001-7941-2961 -->
-
-    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-7941-2961"/>
     
 
 
