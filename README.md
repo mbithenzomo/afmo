@@ -1,5 +1,7 @@
 # Atrial Fibrillation Monitoring Ontology (AFMO)
 
+[![DOI](https://zenodo.org/badge/711852941.svg)](https://doi.org/10.5281/zenodo.24157942)
+
 The Atrial Fibrillation Monitoring Ontology (AFMO) is an ontology for AI-based monitoring of atrial fibrillation (AF). It extends the [Personal Health Monitoring Ontology (PHMO)](https://mbithenzomo.github.io/phmo/), a reusable general ontology for AI-based personal health monitoring applications. The PHMO defines how personal health monitoring concepts are modelled. The AFMO defines which concepts are modelled for AF.
 
 The AFMO supports three main functionalities for AF: AF risk assessment, AF episode prediction, and intervention recommendation. AF risk is assessed by a hybrid Bayesian network, using risk factors such as age group, comorbidities, ECG characteristics, and lifestyle factors. AF episodes are predicted from ECG observations by a deep neural network. The expected utility of recommended interventions, such as alcoholism counselling or angiotensin receptor blocker therapy, is calculated by a Bayesian decision network. Each output is linked to the model that generated it, the inputs it was based on, and the datasets used to train and test the model. AF risk relationships and interventions are also linked to supporting scientific evidence, such as clinical guidelines and systematic reviews.
@@ -80,8 +82,8 @@ If you use find the AFMO useful, please cite it as:
     version = {3.0},
     year = {2026},
     publisher = {Zenodo},
-    doi = {},
-    url = {https://doi.org/},
+    doi = {10.5281/zenodo.24157942},
+    url = {https://doi.org/10.5281/zenodo.24157942},
 }
 ```
 
