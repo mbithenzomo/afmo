@@ -7,8 +7,8 @@
 @base <http://purl.org/afmo#> .
 
 <http://purl.org/afmo> rdf:type owl:Ontology ;
-                        owl:versionIRI <http://purl.org/afmo/3.0> ;
-                        owl:imports <http://purl.org/phmo/1.0> ;
+                        owl:versionIRI <http://purl.org/afmo/v3.0> ;
+                        owl:imports <http://purl.org/phmo/v1.0> ;
                         <http://purl.org/dc/elements/1.1/creator> "Mbithe Nzomo" ;
                         <http://purl.org/dc/elements/1.1/title> "Atrial Fibrillation Monitoring Ontology (AFMO)" ;
                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
@@ -27,7 +27,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
 - Medical Subject Headings (MeSH) Thesaurus
 - National Cancer Institute (NCI) Thesaurus
 - MedlinePlus""" ;
-                        owl:priorVersion <http://purl.org/afmo/2.2> ;
+                        owl:priorVersion <http://purl.org/afmo/v2.2> ;
                         owl:versionInfo "3.0" .
 
 #################################################################

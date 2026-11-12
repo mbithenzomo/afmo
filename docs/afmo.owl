@@ -28,8 +28,8 @@
      xmlns:sw-vocab-status="http://www.w3.org/2003/06/sw-vocab-status/"
      xmlns:explanationPattern="http://linkedu.eu/dedalo/explanationPattern.owl#">
     <owl:Ontology rdf:about="http://purl.org/afmo">
-        <owl:versionIRI rdf:resource="http://purl.org/afmo/3.0"/>
-        <owl:imports rdf:resource="http://purl.org/phmo/1.0"/>
+        <owl:versionIRI rdf:resource="http://purl.org/afmo/v3.0"/>
+        <owl:imports rdf:resource="http://purl.org/phmo/v1.0"/>
         <dc:creator>Mbithe Nzomo</dc:creator>
         <dc:title>Atrial Fibrillation Monitoring Ontology (AFMO)</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
@@ -48,7 +48,7 @@ Health domain concepts have been manually cross-referenced to concepts from the 
 - Medical Subject Headings (MeSH) Thesaurus
 - National Cancer Institute (NCI) Thesaurus
 - MedlinePlus</rdfs:comment>
-        <owl:priorVersion rdf:resource="http://purl.org/afmo/2.2"/>
+        <owl:priorVersion rdf:resource="http://purl.org/afmo/v2.2"/>
         <owl:versionInfo>3.0</owl:versionInfo>
     </owl:Ontology>
     

@@ -1,11 +1,11 @@
 <http://purl.org/afmo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/afmo/3.0> .
-<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/phmo/1.0> .
+<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/afmo/v3.0> .
+<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/phmo/v1.0> .
 <http://purl.org/afmo> <http://purl.org/dc/elements/1.1/creator> "Mbithe Nzomo" .
 <http://purl.org/afmo> <http://purl.org/dc/elements/1.1/title> "Atrial Fibrillation Monitoring Ontology (AFMO)" .
 <http://purl.org/afmo> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
 <http://purl.org/afmo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Atrial Fibrillation Monitoring Ontology (AFMO) extends the Personal Health Monitoring Ontology (PHMO) with concepts specific to atrial fibrillation (AF) monitoring.\n\nFrom version 3.0, general personal health monitoring concepts have moved to the PHMO (http://purl.org/phmo), which the AFMO imports. Terms listed as deleted in the changelog have moved to the PHMO namespace.\n\nIn addition to the ontologies reused through the PHMO, the AFMO contains concepts reused from the following ontologies:\n\n- Human Disease Ontology (DO)\n- Medical Action Ontology (MAxO)\n\nHealth domain concepts have been manually cross-referenced to concepts from the Unified Medical Language System (UMLS) metathesaurus, which maps to several medical vocabularies and terminologies, including:\n\n- SNOMED CT (US)\n- Medical Subject Headings (MeSH) Thesaurus\n- National Cancer Institute (NCI) Thesaurus\n- MedlinePlus" .
-<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/afmo/2.2> .
+<http://purl.org/afmo> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/afmo/v2.2> .
 <http://purl.org/afmo> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" .
 # 
 # 

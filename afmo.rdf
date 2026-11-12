@@ -2888,7 +2888,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/afmo">
     <dc:creator>Mbithe Nzomo</dc:creator>
-    <owl:imports rdf:resource="http://purl.org/phmo/1.0"/>
+    <owl:imports rdf:resource="http://purl.org/phmo/v1.0"/>
     <dc:title>Atrial Fibrillation Monitoring Ontology (AFMO)</dc:title>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dcterms:license>https://creativecommons.org/licenses/by/4.0/</dcterms:license>
@@ -2908,8 +2908,8 @@ Health domain concepts have been manually cross-referenced to concepts from the 
 - Medical Subject Headings (MeSH) Thesaurus
 - National Cancer Institute (NCI) Thesaurus
 - MedlinePlus</rdfs:comment>
-    <owl:versionIRI rdf:resource="http://purl.org/afmo/3.0"/>
-    <owl:priorVersion rdf:resource="http://purl.org/afmo/2.2"/>
+    <owl:versionIRI rdf:resource="http://purl.org/afmo/v3.0"/>
+    <owl:priorVersion rdf:resource="http://purl.org/afmo/v2.2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/phmo#DemographicFactor">
     <phmo:isRiskFactorCategoryInRelationship rdf:resource="http://purl.org/afmo#AFAndDemographicFactors"/>
