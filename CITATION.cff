@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the AFMO, please cite it as below."
+title: "Atrial Fibrillation Monitoring Ontology (AFMO)"
+type: software
+authors:
+  - family-names: Nzomo
+    given-names: Mbithe
+version: "3.0"
+date-released: 2026-11-12
+url: "http://purl.org/afmo"
+repository-code: "https://github.com/mbithenzomo/afmo"
+license: CC-BY-4.0

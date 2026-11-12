@@ -1,72 +1,88 @@
-# Atrial Fibrilliation Monitoring Ontology (AFMO)
+# Atrial Fibrillation Monitoring Ontology (AFMO)
 
-## IRI
-<https://purl.org/afmo>
+The Atrial Fibrillation Monitoring Ontology (AFMO) is an ontology for AI-based monitoring of atrial fibrillation (AF). It extends the [Personal Health Monitoring Ontology (PHMO)](https://mbithenzomo.github.io/phmo/), a reusable general ontology for AI-based personal health monitoring applications. The PHMO defines how personal health monitoring concepts are modelled. The AFMO defines which concepts are modelled for AF.
 
-## About
-The Atrial Fibrillation Monitoring Ontology (AFMO) is a component of a hybrid AI architecture for personal health monitoring using heterogeneous and multimodal health data. It is designed to formally represent health data and expert knowledge for atrial fibrillation (AF) monitoring. This involves three key functionalities: AF detection, AF risk prediction, and decision support.
+The AFMO supports three main functionalities for AF: AF risk assessment, AF episode prediction, and intervention recommendation. AF risk is assessed by a hybrid Bayesian network, using risk factors such as age group, comorbidities, ECG characteristics, and lifestyle factors. AF episodes are predicted from ECG observations by a deep neural network. The expected utility of recommended interventions, such as alcoholism counselling or angiotensin receptor blocker therapy, is calculated by a Bayesian decision network. Each output is linked to the model that generated it, the inputs it was based on, and the datasets used to train and test the model. AF risk relationships and interventions are also linked to supporting scientific evidence, such as clinical guidelines and systematic reviews.
 
-## Documentation
-The AFMO includes concepts related to sensors and sensor data, risk factors for AF, and the scientific literature sources that provide evidence to support the risk factors. A comprehensive ontology documentation, including a WebVOWL visualisation of how the different classes relate to each other, can be found [here](https://mbithenzomo.github.io/afmo/).
+| | |
+|---|---|
+| **Ontology IRI** | `http://purl.org/afmo` |
+| **Current version** | 3.0 (`http://purl.org/afmo/3.0`) |
+| **Previous version** | 2.2 (`http://purl.org/afmo/2.2`) |
+| **Imports** | [PHMO](https://mbithenzomo.github.io/phmo/) 1.0 (`http://purl.org/phmo/1.0`) |
+| **Documentation** | https://mbithenzomo.github.io/afmo |
+| **Creator** | Mbithe Nzomo |
+| **Licence** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
-![Sensors and sensor data concepts in the AFMO](/images/sensors.svg)
-*The Device, Property, Measurement, and Unit of measure classes, relations, and properties. Concepts from reused ontologies are indicated with the prefixes FOAF (Friend of a Friend), SAREF (Smart Applications REFerence), and SAREF4wear (SAREF for Wearables) ontologies.*
+## Scope
 
-![Risk factor hierarchy](/images/risk_factors.svg)
-*The Risk factor class hierarchy, relations, and properties. Concepts from reused ontologies are indicated with the prefixes DOID (Human Disease Ontology) and FOAF (Friend of a Friend).*
+The AFMO adds the following AF-specific concepts to the PHMO:
 
-![Risk relationships](/images/risk.svg)
-*The Risk, Risk relationship, and Risk status classes, relations, and properties. Concepts from reused ontologies are indicated with the prefix ECO (Evidence and Conclusion Ontology).*
+- **AF outputs:** AF risk assessments and risk statuses, and AF episodes, episode predictions, and prediction statuses.
+- **AF risk factors:** the risk factors selected for AF within each PHMO risk factor category.
+  - *Anthropometric:* height group.
+  - *Demographic:* age group, and race or ethnicity.
+  - *Comorbidity:* cardiovascular disease, chronic obstructive pulmonary disease, diabetes mellitus, hypertension, kidney disease, and sleep apnoea.
+  - *ECG:* prolonged PR interval, PR interval variation, prolonged P-wave, P-wave variation, prolonged RR interval, and RR interval variation.
+  - *Lifestyle:* alcohol misuse and smoking status.
+- **ECG data:** ECG devices, ECG sensors and their leads, and ECG observations.
+- **Medical conditions:** AF and its comorbidities, reused from the Human Disease Ontology.
+- **Medical actions:** AF-relevant interventions, such as alcoholism counselling, angiotensin receptor blocker therapy, electrocardiography, and echocardiography, reused from the Medical Action Ontology (MAxO).
+- **Example individuals:** monitored persons, clinicians, and caregivers; sensor observations; risk relationships, risk assessments, episode predictions, interventions, and explanations; and the models, datasets, evidence, and publications behind them.
 
-![Evidence](/images/evidence.svg)
-*The Evidence, Intervention, and Publication classes, the relations between them, and their properties. Concepts from reused ontologies are indicated with the prefixes ECO (Evidence and Conclusion Ontology) and FABIO (FRBR-aligned Bibliographic Ontology).*
+Version 3.0 defines 26 classes, 26 object properties, 1 data property, and 123 individuals in the `afmo` namespace.
+
+## Relationship to the PHMO
+
+The AFMO imports the PHMO and builds on its general concepts, such as monitored persons, observations, risk relationships, models, interventions, evidence, and explanations. For tools that do not follow imports, the AFMO file also contains a copy of the PHMO concepts, so it can be used on its own. General concepts use the `phmo` prefix, and AF-specific concepts use the `afmo` prefix.
+
+## Reused ontologies
+
+In addition to the ontologies reused through the [PHMO](https://github.com/mbithenzomo/phmo#reused-ontologies), the AFMO reuses concepts from the following ontologies:
+
+- Human Disease Ontology (DO)
+- Medical Action Ontology (MAxO)
+
+Health domain concepts have been manually cross-referenced to concepts from the Unified Medical Language System (UMLS) metathesaurus.
+
+## Files
+
+- `afmo.rdf`: the latest version of the ontology in RDF/XML.
+- `afmo2.2_to_afmo3.0_phmo1.0_renames.csv`: the mapping from AFMO 2.2 terms to their new IRIs in AFMO 3.0 and PHMO 1.0.
+- `docs/`: documentation generated with [WIDOCO](https://github.com/dgarijo/Widoco), and versioned copies of the ontology.
+
+## Version history
+
+- **3.0:** general personal health monitoring concepts were moved to the new [PHMO](https://mbithenzomo.github.io/phmo/), which the AFMO now imports. Moved terms changed from the `afmo` namespace to the `phmo` namespace; see `afmo2.2_to_afmo3.0_phmo1.0_renames.csv` for the full mapping. `afmo:ECG_sensor` was renamed `afmo:ECGSensor`.
+- **2.2:** the last version of the AFMO as a single application ontology without the PHMO.
 
 ## Authorship and attributions
+
 ### Author
+
 Mbithe Nzomo
 
 Affiliations:
 *University of Cape Town ([UCT](https://uct.ac.za/))*;
 *Adaptive and Cognitive Systems Lab at the Centre for Artificial Intelligence Research ([ACS Lab at CAIR](https://www.cair.org.za/group/1))*;
-*Artificial Intelligence Research Unit([AIRU](https://uct.ac.za/))*
+*Artificial Intelligence Research Unit ([AIRU](https://uct.ac.za/))*
 
-### How to cite
-If you find the AFMO useful, you may cite the following publications:
+## How to cite
 
-```
-@inproceedings{nzomo_integrating_2025,
-    title = {Integrating {Knowledge} {Graphs} and {Bayesian} {Networks}: {A} {Hybrid} {Approach} for {Explainable} {Disease} {Risk} {Prediction}},
-    author = {Nzomo, Mbithe and Moodley, Deshendran},
-    booktitle = {Proceedings of the 49th {IEEE} {International} {Conference} on {Computers}, {Software}, and {Applications} ({COMPSAC} 2025)},
-    publisher = {IEEE},
-    year = {2025},
-    note = {To appear},
+If you use find the AFMO useful, please cite it as:
+
+> Nzomo, M. (2026). *Atrial Fibrillation Monitoring Ontology (AFMO)* (Version 3.0). Zenodo. https://doi.org/
+
+```bibtex
+@software{nzomo_afmo_2026,
+    title = {Atrial Fibrillation Monitoring Ontology ({AFMO})},
+    author = {Nzomo, Mbithe},
+    version = {3.0},
+    year = {2026},
+    publisher = {Zenodo},
+    doi = {},
+    url = {https://doi.org/},
 }
 ```
 
-```
-@incollection{nzomo_semantic_achitecture_2024,
-    title = {A {Semantic} {Architecture} for {Continuous} {Health} {Monitoring}, {Risk} {Prediction}, and {Proactive} {Decision} {Making}},
-    author = {Nzomo, Mbithe and Moodley, Deshendran},
-	booktitle = {{AI} for {Health} {Equity} and {Fairness}},
-	series = {Studies in {Computational} {Intelligence}},
-	volume = {1164},
-	publisher = {Springer Nature Switzerland},
-	editor = {Shaban-Nejad, Arash and Michalowski, Martin and Bianco, Simone},
-	year = {2024},
-	doi = {10.1007/978-3-031-63592-2_20},
-	pages = {265--281},
-}
-```
-
-## Licence
-[![CC BY 4.0][cc-by-shield]][cc-by]
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+If you use the general concepts, please cite the [PHMO](https://github.com/mbithenzomo/phmo#how-to-cite).
