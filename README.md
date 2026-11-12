@@ -67,7 +67,7 @@ Mbithe Nzomo
 Affiliations:
 *University of Cape Town ([UCT](https://uct.ac.za/))*;
 *Adaptive and Cognitive Systems Lab at the Centre for Artificial Intelligence Research ([ACS Lab at CAIR](https://www.cair.org.za/group/1))*;
-*Artificial Intelligence Research Unit ([AIRU](https://uct.ac.za/))*
+*Artificial Intelligence Research Unit ([AIRU](https://airu.org.za/))*
 
 ## How to cite
 
